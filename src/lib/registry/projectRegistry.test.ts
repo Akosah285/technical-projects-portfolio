@@ -91,6 +91,18 @@ describe("getProject", () => {
     expect((project?.relatedSources?.length ?? 0)).toBeGreaterThanOrEqual(4);
   });
 
+  it("returns the XOR Crypto entry under cryptography-and-text-processing", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "cryptography-and-text-processing",
+      "crypto",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toMatch(/XOR/);
+    expect(project?.originalSourcePath).toMatch(/crypto\.py$/);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",
