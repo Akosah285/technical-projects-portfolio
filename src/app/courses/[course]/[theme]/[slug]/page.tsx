@@ -31,6 +31,7 @@ import { PollockPlayer } from "./PollockPlayer";
 import { LinkedListPlayer } from "./LinkedListPlayer";
 import { GradientDescentPlayer } from "./GradientDescentPlayer";
 import { LinearRegressionPlayer } from "./LinearRegressionPlayer";
+import { LogisticRegressionPlayer } from "./LogisticRegressionPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -112,6 +113,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "linked-list" && <LinkedListPlayer />}
       {project.slug === "gradient-descent" && <GradientDescentPlayer />}
       {project.slug === "linear-regression" && <LinearRegressionPlayer />}
+      {project.slug === "logistic-regression" && <LogisticRegressionPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

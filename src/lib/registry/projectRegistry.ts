@@ -641,6 +641,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "machine-learning",
+    theme: "classification",
+    slug: "logistic-regression",
+    title: "Logistic Regression",
+    summary:
+      "HW3 of CS 74/174 (SP20). The classic single-feature binary classifier — predict the probability of class 1 with σ(w₀ + w₁·x), train under binary cross-entropy with analytic gradient descent. Drag the slope/intercept by hand, train, then move the decision threshold to trade off false positives against false negatives without retraining.",
+    originalSourcePath:
+      "/sources/machine-learning/logistic-regression/HW3_LogisticRegression.ipynb",
+    sourceLanguage: "Python (Jupyter)",
+    relatedSources: [
+      {
+        label: "HW3_LogisticRegression.ipynb",
+        path: "/sources/machine-learning/logistic-regression/HW3_LogisticRegression.ipynb",
+        description: "Original notebook — sigmoid, cross-entropy, gradient descent, evaluate, perceptron cost.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

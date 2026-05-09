@@ -140,6 +140,12 @@ const COURSES: Course[] = [
         description:
           "Linear regression on log-log Kleiber's-law data — body mass vs resting metabolism for ~20 mammals. Drag the line by hand or train it with gradient descent under either least-squares or least-absolute-deviation loss.",
       },
+      {
+        slug: "classification",
+        title: "Classification",
+        description:
+          "Binary classifiers — sigmoid + cross-entropy logistic regression. Drag the slope and intercept, train with gradient descent, and watch the decision boundary slide as the threshold moves.",
+      },
     ],
   },
 ];
