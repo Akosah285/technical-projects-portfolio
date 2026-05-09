@@ -51,9 +51,13 @@ export default async function ProjectPage({ params }: PageParams) {
           Home
         </Link>
         <span className="mx-2">/</span>
-        <span>{project.course}</span>
+        <Link href={`/courses/${project.course}/`} className="hover:underline">
+          {project.course}
+        </Link>
         <span className="mx-2">/</span>
-        <span>{project.theme}</span>
+        <Link href={`/courses/${project.course}/${project.theme}/`} className="hover:underline">
+          {project.theme}
+        </Link>
       </nav>
 
       <header className="space-y-3">
