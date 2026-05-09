@@ -565,6 +565,23 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "data-structures",
+    slug: "linked-list",
+    title: "Singly Linked List (head + tail)",
+    summary:
+      "A from-scratch singly linked list with both head AND tail pointers, so append is O(1) instead of O(n). Step through scripted sequences to watch the pointers move on every add / remove / append operation.",
+    originalSourcePath: "/sources/problem-solving-oop/linked-list/SinglyLinkedHT.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "SinglyLinkedHT.java",
+        path: "/sources/problem-solving-oop/linked-list/SinglyLinkedHT.java",
+        description: "The Java version with the inner Element class, advance / add / remove / append, and a main() that exercises every operation.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

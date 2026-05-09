@@ -28,6 +28,7 @@ import { KevinBaconPlayer } from "./KevinBaconPlayer";
 import { PosTaggerPlayer } from "./PosTaggerPlayer";
 import { SketchEditorPlayer } from "./SketchEditorPlayer";
 import { PollockPlayer } from "./PollockPlayer";
+import { LinkedListPlayer } from "./LinkedListPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -106,6 +107,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "pos-tagger" && <PosTaggerPlayer />}
       {project.slug === "sketch-editor" && <SketchEditorPlayer />}
       {project.slug === "pollock" && <PollockPlayer />}
+      {project.slug === "linked-list" && <LinkedListPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

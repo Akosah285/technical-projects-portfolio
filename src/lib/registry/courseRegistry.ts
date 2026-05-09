@@ -113,6 +113,12 @@ const COURSES: Course[] = [
         description:
           "Pollock-style canvases — thousands of randomly-coloured pixels wandering across the canvas, leaving colour trails wherever they go.",
       },
+      {
+        slug: "data-structures",
+        title: "Data Structures",
+        description:
+          "Hand-rolled containers — singly linked lists with head AND tail pointers (O(1) append), built from scratch and stepped through visually.",
+      },
     ],
   },
 ];
