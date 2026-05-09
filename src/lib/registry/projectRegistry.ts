@@ -424,6 +424,48 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "probabilistic-models",
+    slug: "pos-tagger",
+    title: "HMM Viterbi POS Tagger",
+    summary:
+      "Train a hidden Markov model on a tiny tagged corpus, then decode the most-likely tag sequence for any sentence using Viterbi. Faithfully ports the PS_5 Java solution — including the unseen-word log-penalty fallback (PENALTY = 100).",
+    originalSourcePath: "/sources/problem-solving-oop/pos-tagger/Training.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "Training.java",
+        path: "/sources/problem-solving-oop/pos-tagger/Training.java",
+        description: "Counts → log-probabilities → Viterbi decoder, with the PENALTY=100 fallback for unseen words.",
+      },
+      {
+        label: "hardCoded-train-sentences.txt",
+        path: "/sources/problem-solving-oop/pos-tagger/hardCoded-train-sentences.txt",
+        description: "Eight-sentence training corpus (Gregory the Persian cat) shipped with the original.",
+      },
+      {
+        label: "hardCoded-train-tags.txt",
+        path: "/sources/problem-solving-oop/pos-tagger/hardCoded-train-tags.txt",
+        description: "Aligned POS tags for the training sentences.",
+      },
+      {
+        label: "hardCoded-test-sentences.txt",
+        path: "/sources/problem-solving-oop/pos-tagger/hardCoded-test-sentences.txt",
+        description: "Held-out sentences used to score the original submission.",
+      },
+      {
+        label: "hardCoded-test-tags.txt",
+        path: "/sources/problem-solving-oop/pos-tagger/hardCoded-test-tags.txt",
+        description: "Gold-standard tags for the held-out sentences.",
+      },
+      {
+        label: "hardCode_testResults.txt",
+        path: "/sources/problem-solving-oop/pos-tagger/hardCode_testResults.txt",
+        description: "Captured run output: predicted vs expected tags + accuracy summary.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

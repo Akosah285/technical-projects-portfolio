@@ -1,0 +1,46 @@
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: V ----->  Prediction : V
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : V
+Expected POS: CNJ ----->  Prediction : CNJ
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : N
+Expected POS: V ----->  Prediction : V
+Expected POS: DET ----->  Prediction : DET
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Expected POS: V ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : N
+Expected POS: ADJ ----->  Prediction : N
+Expected POS: CNJ ----->  Prediction : P
+Expected POS: DET ----->  Prediction : DET
+Expected POS: N ----->  Prediction : N
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Expected POS: ADJ ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : N
+Expected POS: V ----->  Prediction : V
+Expected POS: DET ----->  Prediction : DET
+Expected POS: N ----->  Prediction : N
+Expected POS: CNJ ----->  Prediction : CNJ
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Expected POS: V ----->  Prediction : CNJ
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: V ----->  Prediction : MOD
+Expected POS: V ----->  Prediction : V
+Expected POS: TO ----->  Prediction : TO
+Expected POS: V ----->  Prediction : V
+Expected POS: PRO ----->  Prediction : PRO
+Expected POS: N ----->  Prediction : N
+Expected POS: . ----->  Prediction : .
+Number of right predictions: 34.0
+Number of incorrect predictions: 7.0
+Prediction accuracy: 82.92682926829268 %
+
+Type your text input here :

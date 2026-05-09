@@ -95,6 +95,12 @@ const COURSES: Course[] = [
         description:
           "Six degrees of Kevin Bacon — actors as vertices, shared movies as edges, BFS for shortest paths and the resulting Bacon numbers.",
       },
+      {
+        slug: "probabilistic-models",
+        title: "Probabilistic Models",
+        description:
+          "Hidden Markov models with Viterbi decoding — train on a small labelled corpus, then tag any sentence with the most-likely sequence of parts of speech.",
+      },
     ],
   },
 ];
