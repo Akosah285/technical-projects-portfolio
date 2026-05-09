@@ -218,6 +218,12 @@ const COURSES: Course[] = [
         description:
           "Registers and buses driven by the controller. A 16-bit shift register clocks SPI serial data in MSB-first; a parallel-load output register captures the low 12 bits to drive the ADC bus.",
       },
+      {
+        slug: "counters-and-timing",
+        title: "Counters & Timing",
+        description:
+          "Free-running counters used as clock dividers — turn a fast 100 MHz FPGA clock into a 1 kHz sample-rate strobe by counting to TCount and pulsing.",
+      },
     ],
   },
 ];

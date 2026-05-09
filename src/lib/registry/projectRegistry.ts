@@ -865,6 +865,29 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "digital-electronics",
+    theme: "counters-and-timing",
+    slug: "sampling-counter",
+    title: "Sampling Counter (clock divider)",
+    summary:
+      "From sampling_counter.vhd. A free-running counter on the FPGA's 100 MHz sclk that asserts `take_sample` for one cycle every (TCount + 1) clock ticks — the strobe the SPI controller uses to begin a fresh ADC conversion. The default TCount=100,000 yields a 1 kHz sample rate. The original VHDL has a small bug (forgets to clear take_sample when count != TCount) — toggle the “Literal VHDL mode” switch to compare the bug-faithful behaviour against the spec.",
+    originalSourcePath:
+      "/sources/digital-electronics/sampling-counter/sampling_counter.vhd",
+    sourceLanguage: "VHDL",
+    relatedSources: [
+      {
+        label: "sampling_counter.vhd",
+        path: "/sources/digital-electronics/sampling-counter/sampling_counter.vhd",
+        description: "Counter entity — single rising-edge process, free-running.",
+      },
+      {
+        label: "sampling_counter_tb.vhd",
+        path: "/sources/digital-electronics/sampling-counter/sampling_counter_tb.vhd",
+        description: "Testbench from the original submission.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
