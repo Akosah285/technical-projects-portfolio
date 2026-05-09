@@ -20,6 +20,7 @@ import { PortiaPlayer, RichPlayer } from "./InterestPlayer";
 import { EggAndHamPlayer } from "./EggAndHamPlayer";
 import { StringArtPlayer } from "./StringArtPlayer";
 import { LogoTurtlePlayer } from "./LogoTurtlePlayer";
+import { CounterAndTimerPlayer } from "./CounterAndTimerPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -86,6 +87,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "choose" && <ChoosePlayer />}
       {project.slug === "string-art" && <StringArtPlayer />}
       {project.slug === "logo-turtle" && <LogoTurtlePlayer />}
+      {project.slug === "counter-and-timer" && <CounterAndTimerPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

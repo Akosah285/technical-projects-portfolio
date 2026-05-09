@@ -161,6 +161,21 @@ const PROJECTS: Project[] = [
   },
   {
     course: "intro-to-programming",
+    theme: "object-oriented-design",
+    slug: "counter-and-timer",
+    title: "Counter & Timer",
+    summary:
+      "The OOP lab — a countdown Counter with wrap-around plus a Timer built from three Counters (hh:mm:ss). Both classes are ported faithfully to TypeScript and wired to live controls, with a method-call log so the public API stays visible.",
+    originalSourcePath: "/sources/intro-to-programming/counter-and-timer/counterclass.py",
+    relatedSources: [
+      { label: "counterclass.py", path: "/sources/intro-to-programming/counter-and-timer/counterclass.py", description: "The Counter class — a countdown with wrap." },
+      { label: "counter_test.py", path: "/sources/intro-to-programming/counter-and-timer/counter_test.py", description: "The original Counter test harness." },
+      { label: "timer.py", path: "/sources/intro-to-programming/counter-and-timer/timer.py", description: "Timer composed from three Counters (24/60/60)." },
+      { label: "timer_test.py", path: "/sources/intro-to-programming/counter-and-timer/timer_test.py", description: "The original Timer test harness." },
+    ],
+  },
+  {
+    course: "intro-to-programming",
     theme: "drawings-and-generative-art",
     slug: "string-art",
     title: "String Art",

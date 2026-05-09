@@ -143,6 +143,18 @@ describe("getProject", () => {
     }
   });
 
+  it("registers the Counter & Timer OOP project with all four related sources", () => {
+    const project = getProject("intro-to-programming", "object-oriented-design", "counter-and-timer");
+    expect(project).not.toBeNull();
+    expect(project?.relatedSources?.length).toBe(4);
+    expect(project?.relatedSources?.map((s) => s.label).sort()).toEqual([
+      "counter_test.py",
+      "counterclass.py",
+      "timer.py",
+      "timer_test.py",
+    ]);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",
