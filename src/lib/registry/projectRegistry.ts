@@ -775,6 +775,33 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "motor-and-pwm",
+    slug: "motor-rpm",
+    title: "DC Motor + PWM + RPM Speedometer",
+    summary:
+      "Lab 7 of E85 (WI21). A potentiometer drives the AVR's 10-bit ADC, which selects motor mode (FWD / BRAKE / REV) and a PWM duty value over a TB6612 H-bridge. A pin-change interrupt on PIND7 counts pulses from a 3-blade speed sensor, and every second the firmware reports RPM = 3 × pulses (signed by direction). Drag the pot, watch the shaft accelerate, and read the speedometer live.",
+    originalSourcePath: "/sources/embedded-systems/motor-rpm/lab7.c",
+    sourceLanguage: "C (AVR)",
+    relatedSources: [
+      {
+        label: "lab7.c",
+        path: "/sources/embedded-systems/motor-rpm/lab7.c",
+        description: "Main loop — Timer1 PWM, Timer0 sampler, pin-change RPM counter.",
+      },
+      {
+        label: "tb6612.c",
+        path: "/sources/embedded-systems/motor-rpm/tb6612.c",
+        description: "TB6612 H-bridge driver — FWD/REV/BRAKE/STOP + PWM speed.",
+      },
+      {
+        label: "tb6612.h",
+        path: "/sources/embedded-systems/motor-rpm/tb6612.h",
+        description: "Public API + MOTOR_MIN/MAX/DEAD_BAND constants.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

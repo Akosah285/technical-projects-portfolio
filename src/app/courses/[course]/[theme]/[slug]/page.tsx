@@ -37,6 +37,7 @@ import { BlinkyPlayer } from "./BlinkyPlayer";
 import { ReactionGamePlayer } from "./ReactionGamePlayer";
 import { VoltmeterFanPlayer } from "./VoltmeterFanPlayer";
 import { TiltSevenSegPlayer } from "./TiltSevenSegPlayer";
+import { MotorRpmPlayer } from "./MotorRpmPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -124,6 +125,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "reaction-game" && <ReactionGamePlayer />}
       {project.slug === "voltmeter-fan" && <VoltmeterFanPlayer />}
       {project.slug === "tilt-7seg" && <TiltSevenSegPlayer />}
+      {project.slug === "motor-rpm" && <MotorRpmPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

@@ -185,6 +185,12 @@ const COURSES: Course[] = [
         description:
           "Driving an Adafruit HT16K33 4-digit 7-segment display over I2C from an LSM303AGR accelerometer. Tilt the virtual device and watch the same segment-byte format the real firmware sends.",
       },
+      {
+        slug: "motor-and-pwm",
+        title: "Motor & PWM",
+        description:
+          "DC motors driven through a TB6612 H-bridge with PWM, plus a pin-change-interrupt speed sensor. A pot sets direction & speed; an SVG shaft spins; the speedometer reports RPM = 3 × pulses/second.",
+      },
     ],
   },
 ];
