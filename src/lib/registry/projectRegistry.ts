@@ -623,6 +623,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "machine-learning",
+    theme: "regression",
+    slug: "linear-regression",
+    title: "Linear Regression on Kleiber's Law",
+    summary:
+      "HW2 of CS 74/174 (SP20). Fit a straight line to the log–log relationship between an animal's body mass and its resting metabolism. Drag sliders to fit by hand, then train with gradient descent under least-squares or least-absolute-deviation loss. The closed-form OLS fit is overlaid as a dashed reference; Kleiber's law predicts a slope of about 0.75.",
+    originalSourcePath:
+      "/sources/machine-learning/linear-regression/HW2_LinearRegression.ipynb",
+    sourceLanguage: "Python (Jupyter)",
+    relatedSources: [
+      {
+        label: "HW2_LinearRegression.ipynb",
+        path: "/sources/machine-learning/linear-regression/HW2_LinearRegression.ipynb",
+        description: "Original notebook — model + least squares + LAD + Ridge/Lasso polynomial regression with sklearn.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

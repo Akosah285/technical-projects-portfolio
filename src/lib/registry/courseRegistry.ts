@@ -134,6 +134,12 @@ const COURSES: Course[] = [
         description:
           "Gradient descent — the workhorse beneath every supervised model in the course. Animate descent on the HW1 quartic cost surface, watch overshoot, and see what happens when the learning rate is too big.",
       },
+      {
+        slug: "regression",
+        title: "Regression",
+        description:
+          "Linear regression on log-log Kleiber's-law data — body mass vs resting metabolism for ~20 mammals. Drag the line by hand or train it with gradient descent under either least-squares or least-absolute-deviation loss.",
+      },
     ],
   },
 ];
