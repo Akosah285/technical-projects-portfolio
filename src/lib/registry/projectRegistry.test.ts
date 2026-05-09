@@ -53,16 +53,29 @@ describe("getProject", () => {
     expect(project?.originalSourcePath).toMatch(/quicksort\.py$/);
   });
 
-  it("returns the Scan entry under recursion-and-algorithms", () => {
+  it("returns the Sort Cities entry under cities-and-maps with multiple related sources", () => {
     const project = getProject(
       "intro-to-programming",
-      "recursion-and-algorithms",
-      "scan",
+      "cities-and-maps",
+      "sort-cities",
     );
 
     expect(project).not.toBeNull();
-    expect(project?.title).toBe("Scan");
-    expect(project?.originalSourcePath).toMatch(/scan\.py$/);
+    expect(project?.title).toBe("Sort Cities");
+    expect(project?.relatedSources).toBeDefined();
+    expect((project?.relatedSources?.length ?? 0)).toBeGreaterThanOrEqual(3);
+  });
+
+  it("returns the Visualize Cities entry under cities-and-maps", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "cities-and-maps",
+      "visualize-cities",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toBe("Visualize Cities");
+    expect(project?.originalSourcePath).toMatch(/visualize_cities\.py$/);
   });
 
   it("returns null for an unknown slug", () => {

@@ -9,7 +9,10 @@ import { HanoiPlayer } from "./HanoiPlayer";
 import { PongPlayer } from "./PongPlayer";
 import { QuicksortPlayer } from "./QuicksortPlayer";
 import { ScanPlayer } from "./ScanPlayer";
+import { SortCitiesPlayer } from "./SortCitiesPlayer";
+import { VisualizeCitiesPlayer } from "./VisualizeCitiesPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
+import { RelatedSources } from "./RelatedSources";
 
 export function generateStaticParams() {
   return listAllProjectPaths();
@@ -62,8 +65,13 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "pong" && <PongPlayer />}
       {project.slug === "quicksort" && <QuicksortPlayer />}
       {project.slug === "scan" && <ScanPlayer />}
+      {project.slug === "sort-cities" && <SortCitiesPlayer />}
+      {project.slug === "visualize-cities" && <VisualizeCitiesPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
+      )}
+      {project.relatedSources && project.relatedSources.length > 0 && (
+        <RelatedSources sources={project.relatedSources} />
       )}
     </main>
   );

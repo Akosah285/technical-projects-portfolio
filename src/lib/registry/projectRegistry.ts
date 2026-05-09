@@ -12,6 +12,7 @@ export interface Project {
   summary: string;
   originalSourcePath: string;
   checkpoints?: ProjectCheckpoint[];
+  relatedSources?: ProjectCheckpoint[];
 }
 
 const PROJECTS: Project[] = [
@@ -43,6 +44,60 @@ const PROJECTS: Project[] = [
     summary:
       "A step-by-step visualization of inclusive and exclusive prefix-scan operations with both plus and times. Toggle the operation, switch modes, and watch each cell update from the previous one.",
     originalSourcePath: "/sources/intro-to-programming/scan/scan.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "cities-and-maps",
+    slug: "sort-cities",
+    title: "Sort Cities",
+    summary:
+      "Sorts the world's most populous cities along a chosen axis — alphabetically, by population, or by latitude — using the same Lomuto-style quicksort from this course's Recursion & Algorithms work. Switch the axis to watch the city list reorder.",
+    originalSourcePath:
+      "/sources/intro-to-programming/sort-cities/sort_cities.py",
+    relatedSources: [
+      {
+        label: "sort_cities.py",
+        path: "/sources/intro-to-programming/sort-cities/sort_cities.py",
+        description: "Driver: reads the city file, dispatches three sorts, writes outputs.",
+      },
+      {
+        label: "city.py",
+        path: "/sources/intro-to-programming/sort-cities/city.py",
+        description: "City class: country code, name, region, population, latitude, longitude.",
+      },
+      {
+        label: "read_cities.py",
+        path: "/sources/intro-to-programming/sort-cities/read_cities.py",
+        description: "Loads world_cities.txt into a list of City objects.",
+      },
+      {
+        label: "quicksort.py",
+        path: "/sources/intro-to-programming/sort-cities/quicksort.py",
+        description: "Generic quicksort that takes a comparison function.",
+      },
+    ],
+  },
+  {
+    course: "intro-to-programming",
+    theme: "cities-and-maps",
+    slug: "visualize-cities",
+    title: "Visualize Cities",
+    summary:
+      "Plots the world's most populous cities as dots on a world-map projection. Cities appear one at a time, mirroring the original cs1lib animation that revealed cities frame-by-frame.",
+    originalSourcePath:
+      "/sources/intro-to-programming/visualize-cities/visualize_cities.py",
+    relatedSources: [
+      {
+        label: "visualize_cities.py",
+        path: "/sources/intro-to-programming/visualize-cities/visualize_cities.py",
+        description: "Plots cities on a world map; one new city appears each animation frame.",
+      },
+      {
+        label: "city.py",
+        path: "/sources/intro-to-programming/visualize-cities/city.py",
+        description: "Same City class shared with sort_cities.py.",
+      },
+    ],
   },
   {
     course: "intro-to-programming",
