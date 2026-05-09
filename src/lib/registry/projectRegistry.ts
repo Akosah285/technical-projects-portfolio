@@ -298,6 +298,53 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "spatial-data-structures",
+    slug: "point-quadtree",
+    title: "Point Quadtree",
+    summary:
+      "A point quadtree that partitions a 2D rectangle around each anchor and supports O(log n) range queries. Click on the canvas to insert points, slide the query circle around, and watch the tree skip whole subtrees whose bounding rectangles can't intersect the circle. Faithfully ported from the Winter 2019 PS_2 Java submission.",
+    originalSourcePath: "/sources/problem-solving-oop/quadtree/PointQuadtree.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "PointQuadtree.java",
+        path: "/sources/problem-solving-oop/quadtree/PointQuadtree.java",
+        description: "Generic point quadtree — insert, size, allPoints, findInCircle.",
+      },
+      {
+        label: "Geometry.java",
+        path: "/sources/problem-solving-oop/quadtree/Geometry.java",
+        description: "pointInCircle and circleIntersectsRectangle helpers.",
+      },
+      {
+        label: "Point2D.java",
+        path: "/sources/problem-solving-oop/quadtree/Point2D.java",
+        description: "Interface every quadtree element implements.",
+      },
+      {
+        label: "Blob.java",
+        path: "/sources/problem-solving-oop/quadtree/Blob.java",
+        description: "Animated bouncing blob used by the original collision detector.",
+      },
+      {
+        label: "Dot.java",
+        path: "/sources/problem-solving-oop/quadtree/Dot.java",
+        description: "A simple Point2D used by the original DotTreeGUI.",
+      },
+      {
+        label: "DotTreeGUI.java",
+        path: "/sources/problem-solving-oop/quadtree/DotTreeGUI.java",
+        description: "Java GUI that visualizes the tree subdivisions and the circle query.",
+      },
+      {
+        label: "CollisionGUI.java",
+        path: "/sources/problem-solving-oop/quadtree/CollisionGUI.java",
+        description: "Driver that uses the quadtree to detect collisions among many bouncing blobs.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

@@ -22,6 +22,7 @@ import { StringArtPlayer } from "./StringArtPlayer";
 import { LogoTurtlePlayer } from "./LogoTurtlePlayer";
 import { CounterAndTimerPlayer } from "./CounterAndTimerPlayer";
 import { RegionFinderPlayer } from "./RegionFinderPlayer";
+import { QuadtreePlayer } from "./QuadtreePlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -94,6 +95,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "logo-turtle" && <LogoTurtlePlayer />}
       {project.slug === "counter-and-timer" && <CounterAndTimerPlayer />}
       {project.slug === "region-finder" && <RegionFinderPlayer />}
+      {project.slug === "point-quadtree" && <QuadtreePlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

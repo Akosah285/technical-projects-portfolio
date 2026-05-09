@@ -77,6 +77,12 @@ const COURSES: Course[] = [
         description:
           "Region-growing flood-fill on real images — find color-matching connected components and recolor them to make the regions visible.",
       },
+      {
+        slug: "spatial-data-structures",
+        title: "Spatial Data Structures",
+        description:
+          "Point quadtrees that partition 2D space around each anchor point, enabling fast circle range queries and the collision-detection back-end for bouncing blobs.",
+      },
     ],
   },
 ];
