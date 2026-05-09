@@ -929,6 +929,29 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "mechatronics",
+    theme: "closed-loop-control",
+    slug: "speed-control",
+    title: "P vs PI Speed Control",
+    summary:
+      "ENGS 147 Lab 2 + Lab 3 side-by-side. The same first-order motor plant, driven by two controllers at the same time so you can see the difference: pure proportional (Lab 2 — visible steady-state error, can never quite reach the reference) and discrete-time PI (Lab 3 — backward-difference integral that drives the steady-state error to zero). Drag the reference and the gains and watch each trace settle.",
+    originalSourcePath:
+      "/sources/mechatronics/speed-control/Lab2_proportional.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "Lab2_proportional.ino",
+        path: "/sources/mechatronics/speed-control/Lab2_proportional.ino",
+        description: "Lab 2 — pure proportional speed controller (compGain = 0.12).",
+      },
+      {
+        label: "Lab3_PI.ino",
+        path: "/sources/mechatronics/speed-control/Lab3_PI.ino",
+        description: "Lab 3 — discrete-time PI controller (a = 0.106, b = 0.094).",
+      },
+    ],
+  },
 ];
 
 export function getProject(

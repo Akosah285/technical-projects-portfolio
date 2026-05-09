@@ -245,6 +245,12 @@ const COURSES: Course[] = [
         description:
           "Open-loop step-response characterisation of the motor as a first-order system. Pick a PWM duty, watch velocity rise, read off K (steady-state) and τ (the time-to-63.2%).",
       },
+      {
+        slug: "closed-loop-control",
+        title: "Closed-Loop Control",
+        description:
+          "Wrap the motor in a feedback loop. Toggle a pure proportional controller (visible steady-state error) against a discrete-time PI controller (zero steady-state error after a few τ) — same plant, same reference, very different responses.",
+      },
     ],
   },
 ];
