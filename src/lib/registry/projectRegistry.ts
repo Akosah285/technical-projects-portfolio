@@ -743,6 +743,38 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "display-and-motion",
+    slug: "tilt-7seg",
+    title: "Tilt → 7-Segment Display",
+    summary:
+      "Lab 5 of E85 (WI21). An LSM303AGR accelerometer feeds an Adafruit HT16K33 4-digit 7-segment display over I2C. The firmware computes `tilt = asin(Ax / g)`, converts to deci-degrees, then packs four segment-bytes (with minus sign + decimal point) via `SevenSeg_angle()`. Tilt the virtual device and watch the exact same byte stream — rendered SVG-segment-by-segment — that the real display would receive.",
+    originalSourcePath: "/sources/embedded-systems/tilt-7seg/lab5.c",
+    sourceLanguage: "C (AVR)",
+    relatedSources: [
+      {
+        label: "lab5.c",
+        path: "/sources/embedded-systems/tilt-7seg/lab5.c",
+        description: "Main loop — TIMER1 sampling, asin tilt math, SevenSeg_angle call.",
+      },
+      {
+        label: "SevenSeg.c",
+        path: "/sources/embedded-systems/tilt-7seg/SevenSeg.c",
+        description: "HT16K33 driver — number / angle packing, dim, blink.",
+      },
+      {
+        label: "SevenSeg.h",
+        path: "/sources/embedded-systems/tilt-7seg/SevenSeg.h",
+        description: "Public API + numbertable header.",
+      },
+      {
+        label: "lsm303agr.c",
+        path: "/sources/embedded-systems/tilt-7seg/lsm303agr.c",
+        description: "Accelerometer init + raw read (I2C).",
+      },
+    ],
+  },
 ];
 
 export function getProject(

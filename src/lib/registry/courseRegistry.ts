@@ -179,6 +179,12 @@ const COURSES: Course[] = [
         description:
           "Reading analog signals into the AVR through its 10-bit ADC. A TMP36 temperature sensor drives a hysteresis-controlled fan + indicator LEDs.",
       },
+      {
+        slug: "display-and-motion",
+        title: "Display & Motion",
+        description:
+          "Driving an Adafruit HT16K33 4-digit 7-segment display over I2C from an LSM303AGR accelerometer. Tilt the virtual device and watch the same segment-byte format the real firmware sends.",
+      },
     ],
   },
 ];

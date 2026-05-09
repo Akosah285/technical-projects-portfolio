@@ -36,6 +36,7 @@ import { NaiveBayesPlayer } from "./NaiveBayesPlayer";
 import { BlinkyPlayer } from "./BlinkyPlayer";
 import { ReactionGamePlayer } from "./ReactionGamePlayer";
 import { VoltmeterFanPlayer } from "./VoltmeterFanPlayer";
+import { TiltSevenSegPlayer } from "./TiltSevenSegPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -122,6 +123,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "blinky" && <BlinkyPlayer />}
       {project.slug === "reaction-game" && <ReactionGamePlayer />}
       {project.slug === "voltmeter-fan" && <VoltmeterFanPlayer />}
+      {project.slug === "tilt-7seg" && <TiltSevenSegPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
