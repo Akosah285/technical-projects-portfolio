@@ -103,6 +103,18 @@ describe("getProject", () => {
     expect(project?.originalSourcePath).toMatch(/crypto\.py$/);
   });
 
+  it("returns the Game of Life entry under interactive-worlds with both source files", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "interactive-worlds",
+      "game-of-life",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toMatch(/Game of Life/);
+    expect((project?.relatedSources?.length ?? 0)).toBeGreaterThanOrEqual(2);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",

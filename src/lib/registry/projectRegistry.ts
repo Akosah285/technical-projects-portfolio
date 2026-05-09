@@ -162,6 +162,29 @@ const PROJECTS: Project[] = [
   {
     course: "intro-to-programming",
     theme: "interactive-worlds",
+    slug: "game-of-life",
+    title: "Conway's Game of Life",
+    summary:
+      "An interactive Conway's Game of Life on a 30×50 toroidal grid. Click or drag to paint cells, drop in a glider/blinker/pulsar/R-pentomino seed, then play the simulation at variable speed. Faithful to the original Lab cell.py + colony.py topology.",
+    originalSourcePath: "/sources/intro-to-programming/game-of-life/colony.py",
+    relatedSources: [
+      {
+        label: "cell.py",
+        path: "/sources/intro-to-programming/game-of-life/cell.py",
+        description:
+          "Cell class: living flag, kill/revive/flip, draw on the cs1lib canvas in blue (alive) or yellow (dead).",
+      },
+      {
+        label: "colony.py",
+        path: "/sources/intro-to-programming/game-of-life/colony.py",
+        description:
+          "Colony class: 2D grid of cells, click → flip, compute_generation walks the 8 neighbors with toroidal wraparound and applies B3/S23.",
+      },
+    ],
+  },
+  {
+    course: "intro-to-programming",
+    theme: "interactive-worlds",
     slug: "pong",
     title: "Pong",
     summary:
