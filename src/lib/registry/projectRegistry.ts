@@ -716,6 +716,33 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "adc-and-sensors",
+    slug: "voltmeter-fan",
+    title: "Voltmeter + Temperature → Fan",
+    summary:
+      "Lab 3 + Lab 4 of E85 (WI21). A TMP36 analog temperature sensor drives the AVR's 10-bit ADC, and a TIMER1 interrupt samples it once per second. The simulator pipes the user-controlled ambient temperature through the same calibration math (`(V_mV − 500)/10`) and the same hysteresis decision rule (LOW=26°C, HIGH=28°C) the C source uses — driving a virtual red LED, green LED, and a spinning fan.",
+    originalSourcePath: "/sources/embedded-systems/voltmeter-fan/lab4.c",
+    sourceLanguage: "C (AVR)",
+    relatedSources: [
+      {
+        label: "lab4.c",
+        path: "/sources/embedded-systems/voltmeter-fan/lab4.c",
+        description: "Lab 4 — TIMER1-driven 1 Hz sampling + fan/LED controller.",
+      },
+      {
+        label: "voltmeter.c",
+        path: "/sources/embedded-systems/voltmeter-fan/voltmeter.c",
+        description: "Lab 3 — voltmeter that prints ADC + voltage + °C + °F over UART.",
+      },
+      {
+        label: "ADC.c",
+        path: "/sources/embedded-systems/voltmeter-fan/ADC.c",
+        description: "Standalone ADC initialiser (AVCC ref, prescaler /128).",
+      },
+    ],
+  },
 ];
 
 export function getProject(

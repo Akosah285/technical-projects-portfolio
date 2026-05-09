@@ -173,6 +173,12 @@ const COURSES: Course[] = [
         description:
           "Polling buttons through pull-up resistors, debouncing-by-FSM. A two-player reaction-time game runs on a 4-phase state machine: IDLE → COUNTDOWN → READY → CELEBRATE.",
       },
+      {
+        slug: "adc-and-sensors",
+        title: "ADC & Sensors",
+        description:
+          "Reading analog signals into the AVR through its 10-bit ADC. A TMP36 temperature sensor drives a hysteresis-controlled fan + indicator LEDs.",
+      },
     ],
   },
 ];
