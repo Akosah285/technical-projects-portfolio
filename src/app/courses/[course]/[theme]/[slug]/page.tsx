@@ -15,6 +15,9 @@ import { BfsCampusPlayer } from "./BfsCampusPlayer";
 import { CryptoPlayer } from "./CryptoPlayer";
 import { GameOfLifePlayer } from "./GameOfLifePlayer";
 import { SoldiersPlayer } from "./SoldiersPlayer";
+import { ChoosePlayer } from "./ChoosePlayer";
+import { PortiaPlayer, RichPlayer } from "./InterestPlayer";
+import { EggAndHamPlayer } from "./EggAndHamPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -75,6 +78,10 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "crypto" && <CryptoPlayer />}
       {project.slug === "game-of-life" && <GameOfLifePlayer />}
       {project.slug === "soldiers" && <SoldiersPlayer />}
+      {project.slug === "egg-and-ham" && <EggAndHamPlayer />}
+      {project.slug === "portia" && <PortiaPlayer />}
+      {project.slug === "rich" && <RichPlayer />}
+      {project.slug === "choose" && <ChoosePlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

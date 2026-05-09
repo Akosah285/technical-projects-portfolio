@@ -161,6 +161,42 @@ const PROJECTS: Project[] = [
   },
   {
     course: "intro-to-programming",
+    theme: "first-programs-and-loops",
+    slug: "egg-and-ham",
+    title: "Green Eggs and Ham",
+    summary:
+      "A faithful SVG re-rendering of an early cs1lib drawing assignment — same coordinates, same colours, same 400×400 canvas as the original Python.",
+    originalSourcePath: "/sources/intro-to-programming/egg-and-ham/egg_and_ham.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "first-programs-and-loops",
+    slug: "portia",
+    title: "Portia vs Brutus",
+    summary:
+      "A while-loop compound-interest narrative from the loops lab. Brutus puts $1 in the bank at 5% per year; Portia puts $100,000 in at 4%. The loop runs forward in time and prints the year Brutus' tiny stake first overtakes Portia's fortune.",
+    originalSourcePath: "/sources/intro-to-programming/portia/portia.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "first-programs-and-loops",
+    slug: "rich",
+    title: "From One Dollar to a Border Wall",
+    summary:
+      "Same compound-interest engine as Portia, but with a single investor: how big does Brutus' $1 deposit get by 2018, and how many $21.6-billion border walls could that fund? A loop, a constant, and a print.",
+    originalSourcePath: "/sources/intro-to-programming/rich/rich.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "first-programs-and-loops",
+    slug: "choose",
+    title: "Binomial Coefficient",
+    summary:
+      "Recursive computation of n-choose-k from the recursion lab. Two base cases (k = 0, k = n → 1) plus the Pascal-triangle recurrence. Adjust n and k to watch the value compute live.",
+    originalSourcePath: "/sources/intro-to-programming/choose/choose.py",
+  },
+  {
+    course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "soldiers",
     title: "Soldiers — Josephus Problem",

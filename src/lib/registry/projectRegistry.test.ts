@@ -127,6 +127,14 @@ describe("getProject", () => {
     expect(project?.originalSourcePath).toMatch(/soldiers\.py$/);
   });
 
+  it("registers all four First Programs & Loops projects", () => {
+    for (const slug of ["egg-and-ham", "portia", "rich", "choose"]) {
+      const project = getProject("intro-to-programming", "first-programs-and-loops", slug);
+      expect(project).not.toBeNull();
+      expect(project?.originalSourcePath).toMatch(/\.py$/);
+    }
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",
