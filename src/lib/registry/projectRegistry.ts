@@ -888,6 +888,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "digital-electronics",
+    theme: "sequential-design",
+    slug: "stopwatch",
+    title: "Stopwatch FSM",
+    summary:
+      "ENGS 31 Lab 3 — a hundredths-of-a-second stopwatch on a Basys-3 FPGA. Combines everything from the earlier labs: a clock-divider counter ticks at 100 Hz, a two-state Moore FSM (STOPPED ⇄ RUNNING) gates the count, and the 4-digit BCD output drives the on-board 7-segment display in SS.HH format. Reproduced here as a deterministic JS reducer with a full SVG-segment-by-segment render of the same digit table the firmware uses.",
+    originalSourcePath:
+      "/sources/digital-electronics/stopwatch/ENGS_31_Lab_3_Stopwatch.docx",
+    sourceLanguage: "VHDL (lab handout — design from spec)",
+    relatedSources: [
+      {
+        label: "ENGS_31_Lab_3_Stopwatch.docx",
+        path: "/sources/digital-electronics/stopwatch/ENGS_31_Lab_3_Stopwatch.docx",
+        description: "Original lab handout (Word doc) with the design specification.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

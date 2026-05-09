@@ -224,6 +224,12 @@ const COURSES: Course[] = [
         description:
           "Free-running counters used as clock dividers — turn a fast 100 MHz FPGA clock into a 1 kHz sample-rate strobe by counting to TCount and pulsing.",
       },
+      {
+        slug: "sequential-design",
+        title: "Sequential Design",
+        description:
+          "Putting controllers + datapaths + dividers together. A two-state stopwatch FSM (STOPPED ⇄ RUNNING) drives a 4-digit hundredths-of-a-second display with a clear-only-when-stopped guard.",
+      },
     ],
   },
 ];
