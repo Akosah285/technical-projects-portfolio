@@ -107,6 +107,12 @@ const COURSES: Course[] = [
         description:
           "A live sketch editor — pick a tool, draw shapes, then move, recolour, or delete them. The same Shape / Sketch model that the original PS_6 wired through a multi-client TCP server.",
       },
+      {
+        slug: "generative-art",
+        title: "Generative Art",
+        description:
+          "Pollock-style canvases — thousands of randomly-coloured pixels wandering across the canvas, leaving colour trails wherever they go.",
+      },
     ],
   },
 ];

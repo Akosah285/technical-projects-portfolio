@@ -533,6 +533,38 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "generative-art",
+    slug: "pollock",
+    title: "Pollock Canvas",
+    summary:
+      "Thousands of randomly-coloured wandering pixels leaving a colour trail across the canvas. Faithfully ports the WI19 SA_2 Pollock + WanderingPixel + Wanderer trio, swapping the Java BufferedImage for an HTML canvas.",
+    originalSourcePath: "/sources/problem-solving-oop/pollock/Pollock.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "Pollock.java",
+        path: "/sources/problem-solving-oop/pollock/Pollock.java",
+        description: "Spawns the swarm of WanderingPixels and runs the timer-driven animation.",
+      },
+      {
+        label: "WanderingPixel.java",
+        path: "/sources/problem-solving-oop/pollock/WanderingPixel.java",
+        description: "A coloured Wanderer that draws itself as a small filled oval.",
+      },
+      {
+        label: "PurposeWanderer.java",
+        path: "/sources/problem-solving-oop/pollock/PurposeWanderer.java",
+        description: "A variant blob that moves deterministically for N steps before randomising — the warm-up that established the Wanderer pattern.",
+      },
+      {
+        label: "HoloDancers.java",
+        path: "/sources/problem-solving-oop/pollock/HoloDancers.java",
+        description: "First-week class definition exercise — a stand-in for the simplest Java class shape.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",
