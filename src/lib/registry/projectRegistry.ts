@@ -970,6 +970,29 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "mechatronics",
+    theme: "inertial-sensing",
+    slug: "imu-turning",
+    title: "IMU Heading Turn-by-Angle",
+    summary:
+      "Faithful re-implementation of the in-place turning controller from the Mechatronics final project. A BNO055 IMU streams Euler heading at 25 Hz; software computes a relative-heading delta (with 0/360° wraparound) and feeds it into the same K(z−a)/(z−b) lag compensator from Lab 4 — but now controlling an in-place pivot rather than a single motor's angle. Drag the target to any angle in [-180°, +180°] and watch the robot dial chase it. Default gains K = 5.956, a = 0.9851, b = 0.9704 are the ones flashed onto the lab cart.",
+    originalSourcePath:
+      "/sources/mechatronics/imu-turning/decision_making.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "E147_Akosah_HW3.ino",
+        path: "/sources/mechatronics/imu-turning/E147_Akosah_HW3.ino",
+        description: "Standalone BNO055 streaming sketch from HW3 — readEulerHeading + readGyroZ.",
+      },
+      {
+        label: "decision_making.ino",
+        path: "/sources/mechatronics/imu-turning/decision_making.ino",
+        description: "Final-project firmware including turning_right / turning_left lag compensator.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

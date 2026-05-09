@@ -257,6 +257,12 @@ const COURSES: Course[] = [
         description:
           "Discrete-time controller K(z−a)/(z−b) tracking an angular-position square-wave reference. The position output reverses sign every period; the controller chases each new reference through the same first-order plant.",
       },
+      {
+        slug: "inertial-sensing",
+        title: "Inertial Sensing",
+        description:
+          "BNO055 9-DOF IMU drives a closed-loop in-place turn. The controller commands left and right motors in opposition and feeds Euler-heading drift back as the controlled variable, with 0–360° wraparound handled in software so a 90° command always lands at 90° regardless of starting bearing.",
+      },
     ],
   },
 ];
