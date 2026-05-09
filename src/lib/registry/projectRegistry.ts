@@ -27,6 +27,25 @@ const PROJECTS: Project[] = [
   },
   {
     course: "intro-to-programming",
+    theme: "recursion-and-algorithms",
+    slug: "quicksort",
+    title: "Quicksort",
+    summary:
+      "An animated walk-through of Lomuto-style quicksort: pivot selection at the right end, the i/j partition pointers, the swaps that build the low-side region, and the final pivot placement that drives the recursive descent.",
+    originalSourcePath:
+      "/sources/intro-to-programming/quicksort/quicksort.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "recursion-and-algorithms",
+    slug: "scan",
+    title: "Scan",
+    summary:
+      "A step-by-step visualization of inclusive and exclusive prefix-scan operations with both plus and times. Toggle the operation, switch modes, and watch each cell update from the previous one.",
+    originalSourcePath: "/sources/intro-to-programming/scan/scan.py",
+  },
+  {
+    course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",
     title: "Pong",

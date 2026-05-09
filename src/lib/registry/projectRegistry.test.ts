@@ -41,6 +41,30 @@ describe("getProject", () => {
     expect((project?.checkpoints?.length ?? 0)).toBeGreaterThanOrEqual(2);
   });
 
+  it("returns the Quicksort entry under recursion-and-algorithms", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "recursion-and-algorithms",
+      "quicksort",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toBe("Quicksort");
+    expect(project?.originalSourcePath).toMatch(/quicksort\.py$/);
+  });
+
+  it("returns the Scan entry under recursion-and-algorithms", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "recursion-and-algorithms",
+      "scan",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toBe("Scan");
+    expect(project?.originalSourcePath).toMatch(/scan\.py$/);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",

@@ -7,6 +7,8 @@ import {
 import { publicPath } from "@/lib/site/publicPath";
 import { HanoiPlayer } from "./HanoiPlayer";
 import { PongPlayer } from "./PongPlayer";
+import { QuicksortPlayer } from "./QuicksortPlayer";
+import { ScanPlayer } from "./ScanPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 
 export function generateStaticParams() {
@@ -58,6 +60,8 @@ export default async function ProjectPage({ params }: PageParams) {
 
       {project.slug === "towers-of-hanoi" && <HanoiPlayer />}
       {project.slug === "pong" && <PongPlayer />}
+      {project.slug === "quicksort" && <QuicksortPlayer />}
+      {project.slug === "scan" && <ScanPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
