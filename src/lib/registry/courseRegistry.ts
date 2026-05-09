@@ -101,6 +101,12 @@ const COURSES: Course[] = [
         description:
           "Hidden Markov models with Viterbi decoding — train on a small labelled corpus, then tag any sentence with the most-likely sequence of parts of speech.",
       },
+      {
+        slug: "interactive-editors",
+        title: "Interactive Editors",
+        description:
+          "A live sketch editor — pick a tool, draw shapes, then move, recolour, or delete them. The same Shape / Sketch model that the original PS_6 wired through a multi-client TCP server.",
+      },
     ],
   },
 ];

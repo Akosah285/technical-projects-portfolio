@@ -466,6 +466,73 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "interactive-editors",
+    slug: "sketch-editor",
+    title: "Sketch Editor (single-client)",
+    summary:
+      "Draw, move, recolour, and delete shapes on a shared canvas — the same Shape / Sketch model from the PS_6 collaborative editor, with the network layer stripped away. Hit-testing matches the original Java per shape type (ellipse equation; segment-distance ≤ 3 pixels).",
+    originalSourcePath: "/sources/problem-solving-oop/sketch-editor/Editor.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "Editor.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Editor.java",
+        description: "Main Swing window — tool palette, mode radios, mouse handlers.",
+      },
+      {
+        label: "Sketch.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Sketch.java",
+        description: "Synchronised list of shapes with add / remove / topMost / draw.",
+      },
+      {
+        label: "Shape.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Shape.java",
+        description: "Shared interface: contains, moveBy, setColor, setCorners, draw.",
+      },
+      {
+        label: "Ellipse.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Ellipse.java",
+        description: "Ellipse implementation with the (x/a)^2 + (y/b)^2 ≤ 1 hit-test.",
+      },
+      {
+        label: "Rectangle.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Rectangle.java",
+        description: "Bounding-box hit-test rectangle.",
+      },
+      {
+        label: "Segment.java",
+        path: "/sources/problem-solving-oop/sketch-editor/Segment.java",
+        description: "Line segment with point-to-segment-distance ≤ 3 hit-test.",
+      },
+      {
+        label: "EditorCommunicator.java",
+        path: "/sources/problem-solving-oop/sketch-editor/EditorCommunicator.java",
+        description: "Client side of the original networking — speaks the editor protocol over TCP.",
+      },
+      {
+        label: "SketchServer.java",
+        path: "/sources/problem-solving-oop/sketch-editor/SketchServer.java",
+        description: "Multi-client server that broadcasts updates back to every editor.",
+      },
+      {
+        label: "SketchServerCommunicator.java",
+        path: "/sources/problem-solving-oop/sketch-editor/SketchServerCommunicator.java",
+        description: "Per-client server thread; relays add/move/recolor/delete messages.",
+      },
+      {
+        label: "EchoServer.java",
+        path: "/sources/problem-solving-oop/sketch-editor/EchoServer.java",
+        description: "Reference echo server used to test the messaging layer in isolation.",
+      },
+      {
+        label: "EditorOne.java (SA_8)",
+        path: "/sources/problem-solving-oop/sketch-editor/EditorOne.java",
+        description: "Earlier single-client warm-up assignment that established the Shape API.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

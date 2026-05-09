@@ -26,6 +26,7 @@ import { QuadtreePlayer } from "./QuadtreePlayer";
 import { HuffmanPlayer } from "./HuffmanPlayer";
 import { KevinBaconPlayer } from "./KevinBaconPlayer";
 import { PosTaggerPlayer } from "./PosTaggerPlayer";
+import { SketchEditorPlayer } from "./SketchEditorPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -102,6 +103,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "huffman" && <HuffmanPlayer />}
       {project.slug === "kevin-bacon" && <KevinBaconPlayer />}
       {project.slug === "pos-tagger" && <PosTaggerPlayer />}
+      {project.slug === "sketch-editor" && <SketchEditorPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
