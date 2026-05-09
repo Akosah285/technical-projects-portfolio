@@ -146,6 +146,12 @@ const COURSES: Course[] = [
         description:
           "Binary classifiers — sigmoid + cross-entropy logistic regression. Drag the slope and intercept, train with gradient descent, and watch the decision boundary slide as the threshold moves.",
       },
+      {
+        slug: "probabilistic-classifiers",
+        title: "Probabilistic Classifiers",
+        description:
+          "Bag-of-words text classification with Multinomial Naïve Bayes — Laplace smoothing, log-prior + log-likelihood scoring, and a per-word breakdown of how each token nudges the prediction toward spam or ham.",
+      },
     ],
   },
 ];

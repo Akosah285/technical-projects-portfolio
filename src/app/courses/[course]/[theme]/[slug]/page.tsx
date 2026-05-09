@@ -32,6 +32,7 @@ import { LinkedListPlayer } from "./LinkedListPlayer";
 import { GradientDescentPlayer } from "./GradientDescentPlayer";
 import { LinearRegressionPlayer } from "./LinearRegressionPlayer";
 import { LogisticRegressionPlayer } from "./LogisticRegressionPlayer";
+import { NaiveBayesPlayer } from "./NaiveBayesPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -114,6 +115,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "gradient-descent" && <GradientDescentPlayer />}
       {project.slug === "linear-regression" && <LinearRegressionPlayer />}
       {project.slug === "logistic-regression" && <LogisticRegressionPlayer />}
+      {project.slug === "naive-bayes" && <NaiveBayesPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

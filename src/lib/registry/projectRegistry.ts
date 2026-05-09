@@ -659,6 +659,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "machine-learning",
+    theme: "probabilistic-classifiers",
+    slug: "naive-bayes",
+    title: "Naïve Bayes Text Classifier",
+    summary:
+      "HW4 of CS 74/174 (SP20). Multinomial Naïve Bayes from scratch with Laplace smoothing, applied to a tiny spam / ham corpus. Type your own message and watch the model break down each word's log-probability contribution toward each class — and slide the smoothing α to see how the posterior sharpens or softens.",
+    originalSourcePath:
+      "/sources/machine-learning/naive-bayes/HW4_NaiveBayes.ipynb",
+    sourceLanguage: "Python (Jupyter)",
+    relatedSources: [
+      {
+        label: "HW4_NaiveBayes.ipynb",
+        path: "/sources/machine-learning/naive-bayes/HW4_NaiveBayes.ipynb",
+        description: "Original notebook — Multinomial NB, Gaussian NB, F1 score, sklearn comparison.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
