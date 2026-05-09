@@ -64,6 +64,21 @@ const COURSES: Course[] = [
       },
     ],
   },
+  {
+    slug: "problem-solving-oop",
+    title: "Problem Solving via Object-Oriented Programming",
+    subtitle: "Dartmouth COSC 10 · Winter 2019",
+    description:
+      "The follow-up to the introductory course. Originally taught in Java, the projects here are faithful TypeScript ports of my Winter 2019 problem-set submissions — image processing, spatial data structures, compression, graph search, probabilistic models, and collaborative editors. Each project links its original Java source.",
+    themes: [
+      {
+        slug: "image-processing",
+        title: "Image Processing & Camera",
+        description:
+          "Region-growing flood-fill on real images — find color-matching connected components and recolor them to make the regions visible.",
+      },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | null {

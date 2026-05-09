@@ -11,6 +11,8 @@ export interface Project {
   title: string;
   summary: string;
   originalSourcePath: string;
+  /** Display name of the original implementation language ("Python" by default) */
+  sourceLanguage?: string;
   checkpoints?: ProjectCheckpoint[];
   relatedSources?: ProjectCheckpoint[];
 }
@@ -265,6 +267,33 @@ const PROJECTS: Project[] = [
         path: "/sources/intro-to-programming/game-of-life/colony.py",
         description:
           "Colony class: 2D grid of cells, click → flip, compute_generation walks the 8 neighbors with toroidal wraparound and applies B3/S23.",
+      },
+    ],
+  },
+  {
+    course: "problem-solving-oop",
+    theme: "image-processing",
+    slug: "region-finder",
+    title: "Region Finder",
+    summary:
+      "An iterative 8-neighborhood flood-fill that finds and recolors connected color regions in an image. Faithfully ported from the Winter 2019 PS_1 Java submission, and wired to a small canvas where you can pick a target color, tune the color-tolerance and minimum-region thresholds, and watch each region get its own color.",
+    originalSourcePath: "/sources/problem-solving-oop/region-finder/RegionFinder.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "RegionFinder.java",
+        path: "/sources/problem-solving-oop/region-finder/RegionFinder.java",
+        description: "Region-growing class — colorMatch, findRegions, largestRegion, recolorImage.",
+      },
+      {
+        label: "CamPaint.java",
+        path: "/sources/problem-solving-oop/region-finder/CamPaint.java",
+        description: "The webcam-driven driver: shows the largest matching region as a moving paintbrush.",
+      },
+      {
+        label: "RegionsTest.java",
+        path: "/sources/problem-solving-oop/region-finder/RegionsTest.java",
+        description: "Test harness that loads a still image and prints region counts.",
       },
     ],
   },

@@ -21,6 +21,7 @@ import { EggAndHamPlayer } from "./EggAndHamPlayer";
 import { StringArtPlayer } from "./StringArtPlayer";
 import { LogoTurtlePlayer } from "./LogoTurtlePlayer";
 import { CounterAndTimerPlayer } from "./CounterAndTimerPlayer";
+import { RegionFinderPlayer } from "./RegionFinderPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -70,7 +71,7 @@ export default async function ProjectPage({ params }: PageParams) {
             href={publicPath(project.originalSourcePath)}
             className="font-medium underline underline-offset-4"
           >
-            View original Python source
+            View original {project.sourceLanguage ?? "Python"} source
           </a>
         </p>
       </header>
@@ -92,6 +93,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "string-art" && <StringArtPlayer />}
       {project.slug === "logo-turtle" && <LogoTurtlePlayer />}
       {project.slug === "counter-and-timer" && <CounterAndTimerPlayer />}
+      {project.slug === "region-finder" && <RegionFinderPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
