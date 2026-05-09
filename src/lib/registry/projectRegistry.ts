@@ -993,6 +993,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "mechatronics",
+    theme: "autonomous-navigation",
+    slug: "micromouse-maze",
+    title: "Right-Hand Micromouse",
+    summary:
+      "ENGS 147 final project — autonomous maze navigation on an 8×8 grid using the right-hand wall-following rule (prefer right > forward > left > backward). The original car combines IR sensors (for wall detection) with the IMU-driven turning controller from the Inertial Sensing slice and an encoder-based distance controller. This player runs the pure decision logic against three preset mazes: an open arena, an L-shaped corridor, and a ring maze that demonstrates the rule's classic failure mode — it loops the outer ring forever and never enters an enclosed inner room.",
+    originalSourcePath:
+      "/sources/mechatronics/micromouse-maze/decision_making.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "decision_making.ino",
+        path: "/sources/mechatronics/micromouse-maze/decision_making.ino",
+        description: "Full final-project firmware — choose_direction, update_direction, update_position, sensor handling, motor controllers.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

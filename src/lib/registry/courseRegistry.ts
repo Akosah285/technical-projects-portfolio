@@ -263,6 +263,12 @@ const COURSES: Course[] = [
         description:
           "BNO055 9-DOF IMU drives a closed-loop in-place turn. The controller commands left and right motors in opposition and feeds Euler-heading drift back as the controlled variable, with 0–360° wraparound handled in software so a 90° command always lands at 90° regardless of starting bearing.",
       },
+      {
+        slug: "autonomous-navigation",
+        title: "Autonomous Navigation",
+        description:
+          "Right-hand wall-following micromouse running on an 8×8 grid. The same choose_direction state machine that flashed onto the lab cart, exposed as a step-and-watch animation. Pick a maze, hit Run, and watch the rule trace its way to the goal — including the famous failure mode where the right-hand rule loops the outer ring forever and never enters an enclosed inner room.",
+      },
     ],
   },
 ];
