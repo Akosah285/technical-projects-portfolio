@@ -167,6 +167,12 @@ const COURSES: Course[] = [
         description:
           "Lab 1 — drive LEDs by writing to PORT D directly. A faithful AVR-register simulator runs the student's blinkSEQ() and 3-bit counter against virtual DDRD/PORTD registers and lights virtual LEDs.",
       },
+      {
+        slug: "inputs-and-reaction",
+        title: "Inputs & Reaction",
+        description:
+          "Polling buttons through pull-up resistors, debouncing-by-FSM. A two-player reaction-time game runs on a 4-phase state machine: IDLE → COUNTDOWN → READY → CELEBRATE.",
+      },
     ],
   },
 ];

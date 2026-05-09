@@ -34,6 +34,7 @@ import { LinearRegressionPlayer } from "./LinearRegressionPlayer";
 import { LogisticRegressionPlayer } from "./LogisticRegressionPlayer";
 import { NaiveBayesPlayer } from "./NaiveBayesPlayer";
 import { BlinkyPlayer } from "./BlinkyPlayer";
+import { ReactionGamePlayer } from "./ReactionGamePlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -118,6 +119,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "logistic-regression" && <LogisticRegressionPlayer />}
       {project.slug === "naive-bayes" && <NaiveBayesPlayer />}
       {project.slug === "blinky" && <BlinkyPlayer />}
+      {project.slug === "reaction-game" && <ReactionGamePlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

@@ -699,6 +699,23 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "inputs-and-reaction",
+    slug: "reaction-game",
+    title: "Reaction-Time Game",
+    summary:
+      "Two-player reaction-time game from `buttonLED_RTG.c`. The original C polled two buttons through PIND7/PIND4 pull-ups and drove three LEDs on PORTB. Re-rendered as a 4-phase finite state machine — IDLE → COUNTDOWN (start light blinks 3 times) → READY → CELEBRATE — measuring reaction time in milliseconds from when READY begins.",
+    originalSourcePath: "/sources/embedded-systems/reaction-game/buttonLED_RTG.c",
+    sourceLanguage: "C (AVR)",
+    relatedSources: [
+      {
+        label: "buttonLED_RTG.c",
+        path: "/sources/embedded-systems/reaction-game/buttonLED_RTG.c",
+        description: "Two-player reaction game; pull-up button polling + winner flicker.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
