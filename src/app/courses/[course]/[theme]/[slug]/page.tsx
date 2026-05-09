@@ -6,6 +6,8 @@ import {
 } from "@/lib/registry/projectRegistry";
 import { publicPath } from "@/lib/site/publicPath";
 import { HanoiPlayer } from "./HanoiPlayer";
+import { PongPlayer } from "./PongPlayer";
+import { CheckpointTimeline } from "./CheckpointTimeline";
 
 export function generateStaticParams() {
   return listAllProjectPaths();
@@ -55,6 +57,10 @@ export default async function ProjectPage({ params }: PageParams) {
       </header>
 
       {project.slug === "towers-of-hanoi" && <HanoiPlayer />}
+      {project.slug === "pong" && <PongPlayer />}
+      {project.checkpoints && project.checkpoints.length > 0 && (
+        <CheckpointTimeline checkpoints={project.checkpoints} />
+      )}
     </main>
   );
 }

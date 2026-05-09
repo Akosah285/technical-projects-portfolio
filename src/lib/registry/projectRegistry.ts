@@ -1,3 +1,9 @@
+export interface ProjectCheckpoint {
+  label: string;
+  path: string;
+  description?: string;
+}
+
 export interface Project {
   course: string;
   theme: string;
@@ -5,6 +11,7 @@ export interface Project {
   title: string;
   summary: string;
   originalSourcePath: string;
+  checkpoints?: ProjectCheckpoint[];
 }
 
 const PROJECTS: Project[] = [
@@ -17,6 +24,30 @@ const PROJECTS: Project[] = [
       "A recursive solver that prints the optimal move sequence for the Towers of Hanoi puzzle, ported from a Fall 2018 introductory programming submission.",
     originalSourcePath:
       "/sources/intro-to-programming/towers-of-hanoi/solve_hanoi.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "interactive-worlds",
+    slug: "pong",
+    title: "Pong",
+    summary:
+      "A reimplementation of an Atari-style two-player Pong game, originally built in Fall 2018 with the cs1lib graphics library. Two checkpoints show the project growing from paddles-only motion into a full game with ball physics, collisions, and scoring.",
+    originalSourcePath:
+      "/sources/intro-to-programming/pong/pong_game_Akosa.py",
+    checkpoints: [
+      {
+        label: "Paddles only",
+        path: "/sources/intro-to-programming/pong/atari_pong_akosah.py",
+        description:
+          "First checkpoint: two paddles that respond to keyboard input, no ball yet.",
+      },
+      {
+        label: "Full game",
+        path: "/sources/intro-to-programming/pong/pong_game_Akosa.py",
+        description:
+          "Final submission: ball physics, paddle collisions, wall bouncing, scoring, and serve direction.",
+      },
+    ],
   },
 ];
 

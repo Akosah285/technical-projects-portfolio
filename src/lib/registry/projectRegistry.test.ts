@@ -28,6 +28,19 @@ describe("getProject", () => {
     expect(project?.originalSourcePath).toMatch(/\.py$/);
   });
 
+  it("returns the Pong entry under interactive-worlds with multiple checkpoint sources", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "interactive-worlds",
+      "pong",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toBe("Pong");
+    expect(project?.checkpoints).toBeDefined();
+    expect((project?.checkpoints?.length ?? 0)).toBeGreaterThanOrEqual(2);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",
