@@ -121,6 +121,21 @@ const COURSES: Course[] = [
       },
     ],
   },
+  {
+    slug: "machine-learning",
+    title: "Machine Learning and Statistical Data Analysis",
+    subtitle: "Dartmouth CS 74/174 · Spring 2020",
+    description:
+      "Originally taught in Python with autograd / numpy / sklearn. This was largely a learning journey through the maths of supervised learning. The projects here re-implement each homework's core algorithm from scratch in TypeScript and put it behind an interactive playground — sliders for hyper-parameters, animated trajectories, prob tables you can poke. Each project links the original Jupyter notebook submission.",
+    themes: [
+      {
+        slug: "optimisation",
+        title: "Optimisation",
+        description:
+          "Gradient descent — the workhorse beneath every supervised model in the course. Animate descent on the HW1 quartic cost surface, watch overshoot, and see what happens when the learning rate is too big.",
+      },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | null {

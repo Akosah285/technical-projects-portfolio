@@ -605,6 +605,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "machine-learning",
+    theme: "optimisation",
+    slug: "gradient-descent",
+    title: "Gradient Descent Visualiser",
+    summary:
+      "HW1 of CS 74/174 (SP20). Implement gradient descent and watch it walk down a quartic cost surface — g(w) = (w⁴ + w² + 10w − 50) / 50. Drag sliders for the starting point, learning rate, and iteration count; step through the trajectory; see exactly when too-large a step causes the iterates to overshoot, oscillate, or diverge.",
+    originalSourcePath:
+      "/sources/machine-learning/gradient-descent/HW1_GradientDescent.ipynb",
+    sourceLanguage: "Python (Jupyter)",
+    relatedSources: [
+      {
+        label: "HW1_GradientDescent.ipynb",
+        path: "/sources/machine-learning/gradient-descent/HW1_GradientDescent.ipynb",
+        description: "Original Jupyter notebook — autograd-based GD implementation and plots.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
