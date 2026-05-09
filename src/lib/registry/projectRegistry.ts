@@ -952,6 +952,24 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "mechatronics",
+    theme: "position-control",
+    slug: "position-control",
+    title: "Motor Position Control",
+    summary:
+      "ENGS 147 Lab 4. The compensator C(z) = K(z−a)/(z−b) — a discrete-time lead controller designed in the z-domain — drives a brushed DC motor's angular position to track a square-wave reference. The reference flips sign every half period, and the closed loop chases each new target through the same first-order velocity plant from M01. Built-in dial visualises the shaft angle in real time alongside the position trace.",
+    originalSourcePath:
+      "/sources/mechatronics/position-control/Motor_Position_Control.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "Motor_Position_Control.ino",
+        path: "/sources/mechatronics/position-control/Motor_Position_Control.ino",
+        description: "Lab 4 firmware — discrete-time K(z−a)/(z−b) compensator with square-wave reference.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

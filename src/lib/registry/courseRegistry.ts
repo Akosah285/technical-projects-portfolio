@@ -251,6 +251,12 @@ const COURSES: Course[] = [
         description:
           "Wrap the motor in a feedback loop. Toggle a pure proportional controller (visible steady-state error) against a discrete-time PI controller (zero steady-state error after a few τ) — same plant, same reference, very different responses.",
       },
+      {
+        slug: "position-control",
+        title: "Position Control",
+        description:
+          "Discrete-time controller K(z−a)/(z−b) tracking an angular-position square-wave reference. The position output reverses sign every period; the controller chases each new reference through the same first-order plant.",
+      },
     ],
   },
 ];
