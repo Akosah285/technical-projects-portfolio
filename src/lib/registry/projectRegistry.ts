@@ -821,6 +821,28 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "digital-electronics",
+    theme: "state-machines",
+    slug: "spi-fsm",
+    title: "SPI Controller FSM",
+    summary:
+      "Lab 4 of ENGS 31 (SP20). A Moore-style finite state machine in VHDL drives a 16-bit SPI transaction over three states: SWait → Shift → Load → SWait. The Shift state holds for 15 sclk cycles (count 0…14), with TC pulsing the move to Load on the 16th. Pulse take_sample, watch the state graph light up, and read the per-state spi_cs / shift_en / load_en / CE outputs — exactly as the original .vhd entity defined them.",
+    originalSourcePath: "/sources/digital-electronics/spi-fsm/Controller_lab4.vhd",
+    sourceLanguage: "VHDL",
+    relatedSources: [
+      {
+        label: "Controller_lab4.vhd",
+        path: "/sources/digital-electronics/spi-fsm/Controller_lab4.vhd",
+        description: "FSM entity + Moore-style next-state and output logic.",
+      },
+      {
+        label: "Controller_lab4_tb.vhd",
+        path: "/sources/digital-electronics/spi-fsm/Controller_lab4_tb.vhd",
+        description: "Testbench from the original submission.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

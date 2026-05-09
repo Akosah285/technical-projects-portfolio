@@ -39,6 +39,7 @@ import { VoltmeterFanPlayer } from "./VoltmeterFanPlayer";
 import { TiltSevenSegPlayer } from "./TiltSevenSegPlayer";
 import { MotorRpmPlayer } from "./MotorRpmPlayer";
 import { TrafficControlPlayer } from "./TrafficControlPlayer";
+import { SpiFsmPlayer } from "./SpiFsmPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -128,6 +129,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "tilt-7seg" && <TiltSevenSegPlayer />}
       {project.slug === "motor-rpm" && <MotorRpmPlayer />}
       {project.slug === "traffic-control" && <TrafficControlPlayer />}
+      {project.slug === "spi-fsm" && <SpiFsmPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

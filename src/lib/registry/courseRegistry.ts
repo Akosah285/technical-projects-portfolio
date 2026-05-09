@@ -199,6 +199,21 @@ const COURSES: Course[] = [
       },
     ],
   },
+  {
+    slug: "digital-electronics",
+    title: "Digital Electronics",
+    subtitle: "Dartmouth ENGS 31 · Spring 2020",
+    description:
+      "Hardware design in VHDL, targeting Xilinx FPGAs. Each project replays a lab — SPI controller FSMs, parallel-load datapaths, sampling clock dividers, and stopwatch-style sequential machines — by lifting the VHDL behaviour into a deterministic JavaScript simulator with a real waveform / state-diagram view. The original .vhd source is linked from each page.",
+    themes: [
+      {
+        slug: "state-machines",
+        title: "State Machines",
+        description:
+          "Moore-style controller FSMs in VHDL: state diagram, transition table, and per-state output assignments. SPI-bus controller from Lab 4 as the canonical example.",
+      },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | null {
