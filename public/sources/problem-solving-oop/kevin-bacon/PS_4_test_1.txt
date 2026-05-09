@@ -1,0 +1,87 @@
+
+Type in your command
+u Alice
+Alice now the center of the of the universe 
+
+Type in your command
+u Kevin Bacon
+Kevin Bacon now the center of the of the universe 
+
+Type in your command
+p Dartmouth (Earl thereof)
+Dartmouth (Earl thereof)'s number is 3
+Dartmouth (Earl thereof) appeared in [B movie] with Charlie
+Charlie appeared in [C movie] with Bob
+Bob appeared in [A movie] with Kevin Bacon
+
+Type in your command
+p Nobody
+Sorry cannot find path Nobody is not connected to Kevin Bacon
+
+Type in your command
+p Nobody's Friend
+Sorry cannot find path Nobody's Friend is not connected to Kevin Bacon
+
+Type in your command
+i
+These are the actors with infinite seperations from: Kevin Bacon
+Nobody
+Nobody's Friend
+
+Type in your command
+s 0 3
+These are actors are separated from Kevin Bacon by 0-3 steps: 
+Bob
+Alice
+Charlie
+Kevin Bacon
+Dartmouth (Earl thereof)
+
+Type in your command
+s 1 9
+These are actors are separated from Kevin Bacon by 1-9 steps: 
+Bob
+Alice
+Charlie
+Dartmouth (Earl thereof)
+
+Type in your command
+r
+Map of average separation to actor {2.0=Dartmouth (Earl thereof), 1.25=Charlie, 1.75=Kevin Bacon}
+Sorted Averages [1.25, 1.75, 2.0]
+This is is the most connected actor by average separation Charlie
+
+Type in your command
+g
+Number of actors connected to Kevin Bacon: 4
+
+Type in your command
+u Nobody
+Nobody now the center of the of the universe 
+
+Type in your command
+g
+Number of actors connected to Nobody: 1
+
+Type in your command
+u Alice
+Alice now the center of the of the universe 
+
+Type in your command
+c -1
+Ranked by decreasing order of average separation
+1 -> Dartmouth (Earl thereof)
+
+Type in your command
+c 2
+Ranked by ascending order of average separation
+1 -> Charlie
+2 -> Kevin Bacon
+
+Type in your command
+d 0 4
+These actors have an indegree within the range (0, 4) [Bob, Alice, Charlie, Kevin Bacon, Nobody, Nobody's Friend, Dartmouth (Earl thereof)]
+
+Type in your command
+q
+You have quit the game 

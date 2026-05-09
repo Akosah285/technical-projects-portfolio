@@ -387,6 +387,43 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "graph-algorithms",
+    slug: "kevin-bacon",
+    title: "Six Degrees of Kevin Bacon",
+    summary:
+      "BFS over a small actor/movie graph — pick a center, then click any actor to see their Bacon number and the chain of shared movies that connects them. Faithfully ported from the Winter 2019 PS_4 Java submission, including the exact tiny test dataset used to grade it.",
+    originalSourcePath: "/sources/problem-solving-oop/kevin-bacon/KevinBaconGame.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "KevinBaconGame.java",
+        path: "/sources/problem-solving-oop/kevin-bacon/KevinBaconGame.java",
+        description: "Builds the actor graph from the actors / movies / movie-actors text files.",
+      },
+      {
+        label: "KevinBaconUI.java",
+        path: "/sources/problem-solving-oop/kevin-bacon/KevinBaconUI.java",
+        description: "Console UI — set center (u), find path (p), missing actors (i), separation range (s).",
+      },
+      {
+        label: "GraphLib.java",
+        path: "/sources/problem-solving-oop/kevin-bacon/GraphLib.java",
+        description: "Generic graph algorithms: random walk, BFS, getPath, missingVertices, averageSeparation.",
+      },
+      {
+        label: "PS_4_test_1.txt",
+        path: "/sources/problem-solving-oop/kevin-bacon/PS_4_test_1.txt",
+        description: "The exact graded test transcript (the dataset visualized here).",
+      },
+      {
+        label: "PS_4_test_4_FullTextFiles.txt",
+        path: "/sources/problem-solving-oop/kevin-bacon/PS_4_test_4_FullTextFiles.txt",
+        description: "Full-corpus run with the real Kevin Bacon dataset.",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

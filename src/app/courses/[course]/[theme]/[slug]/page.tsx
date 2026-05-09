@@ -24,6 +24,7 @@ import { CounterAndTimerPlayer } from "./CounterAndTimerPlayer";
 import { RegionFinderPlayer } from "./RegionFinderPlayer";
 import { QuadtreePlayer } from "./QuadtreePlayer";
 import { HuffmanPlayer } from "./HuffmanPlayer";
+import { KevinBaconPlayer } from "./KevinBaconPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -98,6 +99,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "region-finder" && <RegionFinderPlayer />}
       {project.slug === "point-quadtree" && <QuadtreePlayer />}
       {project.slug === "huffman" && <HuffmanPlayer />}
+      {project.slug === "kevin-bacon" && <KevinBaconPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

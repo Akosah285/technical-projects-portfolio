@@ -89,6 +89,12 @@ const COURSES: Course[] = [
         description:
           "Huffman coding — count letters, build a min-heap of leaf trees, repeatedly merge the two least-frequent into an inner node, then walk the resulting tree to read off each character's variable-length bit code.",
       },
+      {
+        slug: "graph-algorithms",
+        title: "Graph Algorithms",
+        description:
+          "Six degrees of Kevin Bacon — actors as vertices, shared movies as edges, BFS for shortest paths and the resulting Bacon numbers.",
+      },
     ],
   },
 ];
