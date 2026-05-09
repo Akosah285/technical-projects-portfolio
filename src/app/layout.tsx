@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteNav } from "@/components/SiteNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Akwasi Akosah — Technical Project Portfolio",
   description:
-    "Live, interactive demonstrations of academic engineering and computer science projects.",
+    "Live, interactive demonstrations of academic engineering and computer-science projects, re-rendered in the browser alongside the original source code.",
 };
 
 export default function RootLayout({
@@ -29,34 +30,35 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+      <body className="min-h-full flex flex-col text-white">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-foreground focus:px-3 focus:py-2 focus:text-sm focus:text-background"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-slate-900"
         >
           Skip to content
         </a>
+        <SiteNav />
         <div id="main" className="flex-1">
           {children}
         </div>
-        <footer className="mt-auto border-t border-zinc-200 dark:border-zinc-800 px-6 py-6 text-xs text-zinc-500 dark:text-zinc-400">
-          <div className="mx-auto flex max-w-3xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="mt-24 border-t border-white/10 bg-slate-950/40 px-6 py-10 text-xs text-white/50">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              Original Python submissions written for Dartmouth COSC 1 (FA18);
-              re-rendered here in TypeScript as a personal portfolio.
+              Built from undergraduate coursework at Dartmouth (2018–2021) and
+              re-implemented in TypeScript as an interactive portfolio.
             </div>
             <nav className="flex flex-wrap gap-x-4 gap-y-1">
-              <Link href="/" className="hover:text-foreground">
+              <Link href="/" className="hover:text-white">
                 Home
               </Link>
-              <Link href="/about/" className="hover:text-foreground">
+              <Link href="/about/" className="hover:text-white">
                 About
               </Link>
               <a
                 href="https://github.com/Akosah285/technical-projects-portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground"
+                className="hover:text-white"
               >
                 Source
               </a>

@@ -72,37 +72,41 @@ export default async function ProjectPage({ params }: PageParams) {
   if (!project) notFound();
 
   return (
-    <main className="mx-auto max-w-3xl space-y-8 p-6">
-      <nav className="text-sm text-foreground/60">
-        <Link href="/" className="hover:underline">
+    <main className="mx-auto max-w-5xl px-6 pb-24 pt-12 text-white">
+      <nav className="text-xs text-white/50">
+        <Link href="/" className="hover:text-white">
           Home
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/courses/${project.course}/`} className="hover:underline">
+        <Link href={`/courses/${project.course}/`} className="hover:text-white">
           {project.course}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/courses/${project.course}/${project.theme}/`} className="hover:underline">
+        <Link href={`/courses/${project.course}/${project.theme}/`} className="hover:text-white">
           {project.theme}
         </Link>
       </nav>
 
-      <header className="space-y-3">
-        <h1 className="text-3xl font-semibold tracking-tight">
+      <header className="mt-8 space-y-4 border-b border-white/10 pb-10">
+        <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {project.title}
         </h1>
-        <p className="text-foreground/80">{project.summary}</p>
-        <p className="text-sm">
+        <p className="max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
+          {project.summary}
+        </p>
+        <div className="flex flex-wrap gap-3 pt-2">
           <a
             href={publicPath(project.originalSourcePath)}
-            className="font-medium underline underline-offset-4"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80 transition hover:bg-white/10 hover:text-white"
           >
             View original {project.sourceLanguage ?? "Python"} source
+            <span aria-hidden>↗</span>
           </a>
-        </p>
+        </div>
       </header>
 
-      {project.slug === "towers-of-hanoi" && <HanoiPlayer />}
+      <div className="mt-10 space-y-8">
+        {project.slug === "towers-of-hanoi" && <HanoiPlayer />}
       {project.slug === "pong" && <PongPlayer />}
       {project.slug === "quicksort" && <QuicksortPlayer />}
       {project.slug === "scan" && <ScanPlayer />}
@@ -152,6 +156,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.relatedSources && project.relatedSources.length > 0 && (
         <RelatedSources sources={project.relatedSources} />
       )}
+      </div>
     </main>
   );
 }

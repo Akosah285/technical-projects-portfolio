@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getTheme, listAllCourses } from "@/lib/registry/courseRegistry";
 import { listProjectsForTheme } from "@/lib/registry/projectRegistry";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { EyebrowHeading } from "@/components/EyebrowHeading";
 
 export function generateStaticParams() {
   const params: Array<{ course: string; theme: string }> = [];
@@ -31,43 +33,49 @@ export default async function ThemePage({ params }: PageParams) {
   const projects = listProjectsForTheme(course, theme);
 
   return (
-    <main className="mx-auto max-w-3xl space-y-10 p-6">
-      <nav className="text-sm text-foreground/60">
-        <Link href="/" className="hover:underline">
+    <main className="mx-auto max-w-5xl px-6 pb-24 pt-12 text-white">
+      <nav className="text-xs text-white/50">
+        <Link href="/" className="hover:text-white">
           Home
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/courses/${r.course.slug}/`} className="hover:underline">
+        <Link href={`/courses/${r.course.slug}/`} className="hover:text-white">
           {r.course.slug}
         </Link>
         <span className="mx-2">/</span>
-        <span>{r.theme.slug}</span>
+        <span className="text-white/80">{r.theme.slug}</span>
       </nav>
 
-      <header className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">{r.course.subtitle}</p>
-        <h1 className="text-3xl font-semibold tracking-tight">{r.theme.title}</h1>
-        <p className="text-foreground/80">{r.theme.description}</p>
-      </header>
+      <ScrollReveal>
+        <header className="mt-8">
+          <EyebrowHeading eyebrow={r.course.subtitle}>{r.theme.title}</EyebrowHeading>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+            {r.theme.description}
+          </p>
+        </header>
+      </ScrollReveal>
 
-      <section className="space-y-4">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-          Projects in this theme
-        </h2>
-        <ul className="space-y-3">
-          {projects.map((project) => (
-            <li
-              key={project.slug}
-              className="rounded-xl border border-zinc-200 p-4 transition hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
-            >
-              <Link
-                href={`/courses/${project.course}/${project.theme}/${project.slug}/`}
-                className="block space-y-1"
-              >
-                <div className="text-lg font-medium">{project.title}</div>
-                <p className="text-sm text-foreground/70">{project.summary}</p>
-              </Link>
-            </li>
+      <section className="mt-16 space-y-4">
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {projects.map((project, i) => (
+            <ScrollReveal key={project.slug} delay={i * 50}>
+              <li className="h-full">
+                <Link
+                  href={`/courses/${project.course}/${project.theme}/${project.slug}/`}
+                  className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition hover:border-blue-400/40 hover:bg-white/[0.07]"
+                >
+                  <div className="text-lg font-semibold text-white group-hover:text-blue-200">
+                    {project.title}
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-white/65">
+                    {project.summary}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-1 pt-4 text-xs font-semibold text-blue-300/90 group-hover:text-blue-200">
+                    Run the demo <span aria-hidden>→</span>
+                  </span>
+                </Link>
+              </li>
+            </ScrollReveal>
           ))}
         </ul>
       </section>
