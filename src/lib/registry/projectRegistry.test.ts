@@ -115,6 +115,18 @@ describe("getProject", () => {
     expect((project?.relatedSources?.length ?? 0)).toBeGreaterThanOrEqual(2);
   });
 
+  it("returns the Soldiers/Josephus entry under interactive-worlds", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "interactive-worlds",
+      "soldiers",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toMatch(/Josephus/);
+    expect(project?.originalSourcePath).toMatch(/soldiers\.py$/);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",

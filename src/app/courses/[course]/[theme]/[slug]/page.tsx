@@ -14,6 +14,7 @@ import { VisualizeCitiesPlayer } from "./VisualizeCitiesPlayer";
 import { BfsCampusPlayer } from "./BfsCampusPlayer";
 import { CryptoPlayer } from "./CryptoPlayer";
 import { GameOfLifePlayer } from "./GameOfLifePlayer";
+import { SoldiersPlayer } from "./SoldiersPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -73,6 +74,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "bfs-dartmouth-campus" && <BfsCampusPlayer />}
       {project.slug === "crypto" && <CryptoPlayer />}
       {project.slug === "game-of-life" && <GameOfLifePlayer />}
+      {project.slug === "soldiers" && <SoldiersPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

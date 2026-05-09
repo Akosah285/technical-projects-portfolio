@@ -162,6 +162,23 @@ const PROJECTS: Project[] = [
   {
     course: "intro-to-programming",
     theme: "interactive-worlds",
+    slug: "soldiers",
+    title: "Soldiers — Josephus Problem",
+    summary:
+      "An animated walk-through of the Josephus circular-elimination problem from this course's circular-linked-list lab. N soldiers stand in a circle; every k-th soldier is eliminated until one remains. Adjust N and k, then watch the pointer count around the ring.",
+    originalSourcePath: "/sources/intro-to-programming/soldiers/soldiers.py",
+    relatedSources: [
+      {
+        label: "soldiers.py",
+        path: "/sources/intro-to-programming/soldiers/soldiers.py",
+        description:
+          "Soldier and Army classes — circular doubly-linked list, kill() splices a node out, kill_all(k) advances by k each round until one soldier remains.",
+      },
+    ],
+  },
+  {
+    course: "intro-to-programming",
+    theme: "interactive-worlds",
     slug: "game-of-life",
     title: "Conway's Game of Life",
     summary:
