@@ -345,6 +345,48 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    course: "problem-solving-oop",
+    theme: "compression-and-encoding",
+    slug: "huffman",
+    title: "Huffman Compression",
+    summary:
+      "Type some text and watch the Huffman pipeline run live: a frequency table, the tree built by repeatedly merging the two least-frequent subtrees, and the final variable-length bit string. Faithfully ported from the Winter 2019 PS_3 Java submission, which compressed the U.S. Constitution from 45 KB to 25 KB on disk.",
+    originalSourcePath: "/sources/problem-solving-oop/huffman/CompressFile.java",
+    sourceLanguage: "Java",
+    relatedSources: [
+      {
+        label: "CompressFile.java",
+        path: "/sources/problem-solving-oop/huffman/CompressFile.java",
+        description: "End-to-end driver: reads a file, builds the frequency map, builds the tree, encodes, decodes.",
+      },
+      {
+        label: "HuffmanTree.java",
+        path: "/sources/problem-solving-oop/huffman/HuffmanTree.java",
+        description: "The recursive tree node — leaves carry a character, inner nodes carry a frequency total.",
+      },
+      {
+        label: "BufferedBitReader.java",
+        path: "/sources/problem-solving-oop/huffman/BufferedBitReader.java",
+        description: "Reads compressed bit stream, byte-by-byte, with end-of-stream handling.",
+      },
+      {
+        label: "BufferedBitWriter.java",
+        path: "/sources/problem-solving-oop/huffman/BufferedBitWriter.java",
+        description: "Writes compressed bit stream with a trailing byte that records the bit count.",
+      },
+      {
+        label: "USConstitution_compressed.txt",
+        path: "/sources/problem-solving-oop/huffman/USConstitution_compressed.txt",
+        description: "The actual bit-packed compressed output produced by the Java submission (≈25 KB).",
+      },
+      {
+        label: "USConstitution_decompressed.txt",
+        path: "/sources/problem-solving-oop/huffman/USConstitution_decompressed.txt",
+        description: "Decompressed output — byte-for-byte identical to the original (≈45 KB).",
+      },
+    ],
+  },
+  {
     course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",

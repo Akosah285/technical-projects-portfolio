@@ -83,6 +83,12 @@ const COURSES: Course[] = [
         description:
           "Point quadtrees that partition 2D space around each anchor point, enabling fast circle range queries and the collision-detection back-end for bouncing blobs.",
       },
+      {
+        slug: "compression-and-encoding",
+        title: "Compression & Encoding",
+        description:
+          "Huffman coding — count letters, build a min-heap of leaf trees, repeatedly merge the two least-frequent into an inner node, then walk the resulting tree to read off each character's variable-length bit code.",
+      },
     ],
   },
 ];
