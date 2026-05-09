@@ -3,6 +3,8 @@ export interface Project {
   theme: string;
   slug: string;
   title: string;
+  summary: string;
+  originalSourcePath: string;
 }
 
 const PROJECTS: Project[] = [
@@ -11,6 +13,10 @@ const PROJECTS: Project[] = [
     theme: "recursion-and-algorithms",
     slug: "towers-of-hanoi",
     title: "Towers of Hanoi",
+    summary:
+      "A recursive solver that prints the optimal move sequence for the Towers of Hanoi puzzle, ported from a Fall 2018 introductory programming submission.",
+    originalSourcePath:
+      "/sources/intro-to-programming/towers-of-hanoi/solve_hanoi.py",
   },
 ];
 

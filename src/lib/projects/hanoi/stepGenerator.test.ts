@@ -1,39 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { generateHanoiSteps, type HanoiMove, type Peg } from "./stepGenerator";
-
-type PegState = Record<Peg, number[]>;
-
-function startState(n: number, source: Peg): PegState {
-  const empty: PegState = { A: [], B: [], C: [] };
-  empty[source] = Array.from({ length: n }, (_, i) => n - i);
-  return empty;
-}
-
-function applyMove(state: PegState, move: HanoiMove): PegState {
-  const fromStack = [...state[move.from]];
-  const toStack = [...state[move.to]];
-  const disk = fromStack.pop();
-  if (disk === undefined) {
-    throw new Error(`Illegal move: source peg ${move.from} is empty`);
-  }
-  if (disk !== move.disk) {
-    throw new Error(
-      `Illegal move: top of ${move.from} is ${disk}, move expected ${move.disk}`,
-    );
-  }
-  const top = toStack[toStack.length - 1];
-  if (top !== undefined && top < disk) {
-    throw new Error(
-      `Illegal move: cannot place disk ${disk} on smaller disk ${top} (peg ${move.to})`,
-    );
-  }
-  toStack.push(disk);
-  return { ...state, [move.from]: fromStack, [move.to]: toStack };
-}
-
-function simulate(n: number, source: Peg, moves: HanoiMove[]): PegState {
-  return moves.reduce(applyMove, startState(n, source));
-}
+import { generateHanoiSteps } from "./stepGenerator";
+import { simulate } from "./pegState";
 
 describe("generateHanoiSteps", () => {
   it("solves n=1 with a single move from source to destination", () => {

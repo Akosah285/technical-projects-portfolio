@@ -17,6 +17,17 @@ describe("getProject", () => {
     expect(project?.title).toBe("Towers of Hanoi");
   });
 
+  it("the Towers of Hanoi entry exposes a summary and a link to the original Python source", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "recursion-and-algorithms",
+      "towers-of-hanoi",
+    );
+
+    expect(project?.summary).toBeTruthy();
+    expect(project?.originalSourcePath).toMatch(/\.py$/);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",
