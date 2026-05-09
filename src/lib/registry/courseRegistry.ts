@@ -154,6 +154,21 @@ const COURSES: Course[] = [
       },
     ],
   },
+  {
+    slug: "embedded-systems",
+    title: "Embedded Systems",
+    subtitle: "Dartmouth ENGS 28 / E85 · Winter 2021",
+    description:
+      "Bare-metal C on the AVR ATmega328p (Arduino UNO board). Each project replays a lab — bit-banging GPIO, polling buttons, ADC sensors, 7-segment displays, PWM motors, and an MQTT IoT dashboard — as an in-browser simulator that drives virtual hardware off the same register reads / writes the original C source did.",
+    themes: [
+      {
+        slug: "bit-banging-gpio",
+        title: "Bit-Banging GPIO",
+        description:
+          "Lab 1 — drive LEDs by writing to PORT D directly. A faithful AVR-register simulator runs the student's blinkSEQ() and 3-bit counter against virtual DDRD/PORTD registers and lights virtual LEDs.",
+      },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | null {

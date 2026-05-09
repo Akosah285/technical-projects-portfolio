@@ -677,6 +677,28 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "bit-banging-gpio",
+    slug: "blinky",
+    title: "Blinky — Virtual AVR Registers",
+    summary:
+      "Lab 1 of E85 (WI21). The first AVR program — drive three LEDs on PORT D bits 2/4/7 by writing directly to the DDRD (data direction) and PORTD (output) registers. The simulator interprets the same |=, &= ~, ^= bit-twiddling idioms the student wrote in C, against virtual 8-bit registers, and lights virtual LEDs only when both DDRD bit AND PORTD bit are 1 — exactly as on real hardware. Step through blinkSEQ.c (sequential) or blinkyCNT.c (3-bit counter) instruction-by-instruction.",
+    originalSourcePath: "/sources/embedded-systems/blinky/blinkySEQ.c",
+    sourceLanguage: "C (AVR)",
+    relatedSources: [
+      {
+        label: "blinkySEQ.c",
+        path: "/sources/embedded-systems/blinky/blinkySEQ.c",
+        description: "Sequential blink — light D2, D4, D7 in order using bit-set / bit-clear.",
+      },
+      {
+        label: "blinkyCNT.c",
+        path: "/sources/embedded-systems/blinky/blinkyCNT.c",
+        description: "3-bit binary counter on the same three LEDs.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
