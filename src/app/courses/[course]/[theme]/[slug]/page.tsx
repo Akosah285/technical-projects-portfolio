@@ -40,6 +40,7 @@ import { TiltSevenSegPlayer } from "./TiltSevenSegPlayer";
 import { MotorRpmPlayer } from "./MotorRpmPlayer";
 import { TrafficControlPlayer } from "./TrafficControlPlayer";
 import { SpiFsmPlayer } from "./SpiFsmPlayer";
+import { SpiDatapathPlayer } from "./SpiDatapathPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -130,6 +131,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "motor-rpm" && <MotorRpmPlayer />}
       {project.slug === "traffic-control" && <TrafficControlPlayer />}
       {project.slug === "spi-fsm" && <SpiFsmPlayer />}
+      {project.slug === "spi-datapath" && <SpiDatapathPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

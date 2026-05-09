@@ -212,6 +212,12 @@ const COURSES: Course[] = [
         description:
           "Moore-style controller FSMs in VHDL: state diagram, transition table, and per-state output assignments. SPI-bus controller from Lab 4 as the canonical example.",
       },
+      {
+        slug: "datapaths",
+        title: "Datapaths",
+        description:
+          "Registers and buses driven by the controller. A 16-bit shift register clocks SPI serial data in MSB-first; a parallel-load output register captures the low 12 bits to drive the ADC bus.",
+      },
     ],
   },
 ];

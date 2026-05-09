@@ -843,6 +843,28 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "digital-electronics",
+    theme: "datapaths",
+    slug: "spi-datapath",
+    title: "SPI Receiver Datapath",
+    summary:
+      "From lab4_datapath.vhd. The companion datapath to the SPI controller FSM: a 16-bit shift register clocks `spi_sdata` in MSB-first while `shift_en` is high; on a `load_en` pulse, the low 12 bits are latched into the parallel output register that drives `ad_data` (the 12-bit ADC bus). Drive any 16-bit pattern through the bus, watch each bit slot in, then capture.",
+    originalSourcePath: "/sources/digital-electronics/spi-datapath/lab4_datapath.vhd",
+    sourceLanguage: "VHDL",
+    relatedSources: [
+      {
+        label: "lab4_datapath.vhd",
+        path: "/sources/digital-electronics/spi-datapath/lab4_datapath.vhd",
+        description: "Datapath entity — shift_register + output_register processes.",
+      },
+      {
+        label: "lab4_datapath_tb.vhd",
+        path: "/sources/digital-electronics/spi-datapath/lab4_datapath_tb.vhd",
+        description: "Testbench from the original submission.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
