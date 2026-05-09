@@ -232,6 +232,21 @@ const COURSES: Course[] = [
       },
     ],
   },
+  {
+    slug: "mechatronics",
+    title: "Mechatronics",
+    subtitle: "Dartmouth ENGS 147 · Spring 2021",
+    description:
+      "Closed-loop control of a brushed DC motor + an autonomous micromouse robot, originally written in Arduino C++ on an ATmega2560 with quadrature encoders, an Arduino Motor Shield R3, sharp-IR distance sensors, and a Bosch BNO055 9-axis IMU. The projects port the firmware into deterministic JS simulators — drag the PWM, watch the first-order velocity rise; toggle P vs PI and see steady-state error vanish; track a square-wave position reference; turn the robot by-N-degrees off IMU heading; and let the wall-following micromouse explore an 8×8 maze. Original .ino source files are linked from each page.",
+    themes: [
+      {
+        slug: "system-identification",
+        title: "System Identification",
+        description:
+          "Open-loop step-response characterisation of the motor as a first-order system. Pick a PWM duty, watch velocity rise, read off K (steady-state) and τ (the time-to-63.2%).",
+      },
+    ],
+  },
 ];
 
 export function getCourse(slug: string): Course | null {

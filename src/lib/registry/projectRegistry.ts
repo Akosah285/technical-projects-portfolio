@@ -906,6 +906,29 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "mechatronics",
+    theme: "system-identification",
+    slug: "motor-step-response",
+    title: "Motor Step Response",
+    summary:
+      "ENGS 147 Lab 1. Apply a constant PWM step to a brushed DC motor through the Arduino Motor Shield R3 and watch its angular velocity rise along a textbook first-order curve. Read off the steady-state gain K (rad/s at full PWM) and the time constant τ (the time it takes velocity to reach 63.2% of K) — the two parameters every closed-loop controller in the next four projects depends on.",
+    originalSourcePath:
+      "/sources/mechatronics/motor-step-response/Lab1_part2_timed_loop.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "Lab1_part2_timed_loop.ino",
+        path: "/sources/mechatronics/motor-step-response/Lab1_part2_timed_loop.ino",
+        description: "Lab 1 timed-loop firmware: 5 ms streaming, encoder velocity per period.",
+      },
+      {
+        label: "BigCompilationExample.ino",
+        path: "/sources/mechatronics/motor-step-response/BigCompilationExample.ino",
+        description: "Open-loop characterisation example with a longer streaming horizon.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

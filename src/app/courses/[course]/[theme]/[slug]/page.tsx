@@ -43,6 +43,7 @@ import { SpiFsmPlayer } from "./SpiFsmPlayer";
 import { SpiDatapathPlayer } from "./SpiDatapathPlayer";
 import { SamplingCounterPlayer } from "./SamplingCounterPlayer";
 import { StopwatchPlayer } from "./StopwatchPlayer";
+import { MotorStepResponsePlayer } from "./MotorStepResponsePlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -136,6 +137,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "spi-datapath" && <SpiDatapathPlayer />}
       {project.slug === "sampling-counter" && <SamplingCounterPlayer />}
       {project.slug === "stopwatch" && <StopwatchPlayer />}
+      {project.slug === "motor-step-response" && <MotorStepResponsePlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
