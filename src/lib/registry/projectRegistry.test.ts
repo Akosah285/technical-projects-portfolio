@@ -78,6 +78,19 @@ describe("getProject", () => {
     expect(project?.originalSourcePath).toMatch(/visualize_cities\.py$/);
   });
 
+  it("returns the BFS Dartmouth Campus entry under cities-and-maps with the BFS source", () => {
+    const project = getProject(
+      "intro-to-programming",
+      "cities-and-maps",
+      "bfs-dartmouth-campus",
+    );
+
+    expect(project).not.toBeNull();
+    expect(project?.title).toMatch(/BFS/);
+    expect(project?.originalSourcePath).toMatch(/bfs\.py$/);
+    expect((project?.relatedSources?.length ?? 0)).toBeGreaterThanOrEqual(4);
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",

@@ -11,6 +11,7 @@ import { QuicksortPlayer } from "./QuicksortPlayer";
 import { ScanPlayer } from "./ScanPlayer";
 import { SortCitiesPlayer } from "./SortCitiesPlayer";
 import { VisualizeCitiesPlayer } from "./VisualizeCitiesPlayer";
+import { BfsCampusPlayer } from "./BfsCampusPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -67,6 +68,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "scan" && <ScanPlayer />}
       {project.slug === "sort-cities" && <SortCitiesPlayer />}
       {project.slug === "visualize-cities" && <VisualizeCitiesPlayer />}
+      {project.slug === "bfs-dartmouth-campus" && <BfsCampusPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

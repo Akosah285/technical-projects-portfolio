@@ -101,6 +101,43 @@ const PROJECTS: Project[] = [
   },
   {
     course: "intro-to-programming",
+    theme: "cities-and-maps",
+    slug: "bfs-dartmouth-campus",
+    title: "BFS Across the Dartmouth Campus",
+    summary:
+      "A breadth-first-search shortest-path solver played out on the Dartmouth campus map. Click a start landmark and a goal landmark; the BFS frontier expands outward across the graph, and the shortest route highlights when the goal is reached.",
+    originalSourcePath:
+      "/sources/intro-to-programming/bfs-dartmouth-campus/bfs.py",
+    relatedSources: [
+      {
+        label: "bfs.py",
+        path: "/sources/intro-to-programming/bfs-dartmouth-campus/bfs.py",
+        description: "The breadth-first-search itself: deque-based frontier, back-pointer dictionary, path reconstruction.",
+      },
+      {
+        label: "vertex.py",
+        path: "/sources/intro-to-programming/bfs-dartmouth-campus/vertex.py",
+        description: "Vertex class: name, x/y location on the map, adjacency list of neighbouring vertices.",
+      },
+      {
+        label: "load_graph.py",
+        path: "/sources/intro-to-programming/bfs-dartmouth-campus/load_graph.py",
+        description: "Reads dartmouth_graph.txt twice — once to build the vertex dictionary, once to wire up adjacencies.",
+      },
+      {
+        label: "map_plot.py",
+        path: "/sources/intro-to-programming/bfs-dartmouth-campus/map_plot.py",
+        description: "The cs1lib runner: campus map background, mouse-driven start/goal selection, BFS path overlay.",
+      },
+      {
+        label: "lab_3_checkpoint.py",
+        path: "/sources/intro-to-programming/bfs-dartmouth-campus/lab_3_checkpoint.py",
+        description: "Lab 3 checkpoint that produced vertices.txt — the very file this project still reads from to build its graph.",
+      },
+    ],
+  },
+  {
+    course: "intro-to-programming",
     theme: "interactive-worlds",
     slug: "pong",
     title: "Pong",
