@@ -135,6 +135,14 @@ describe("getProject", () => {
     }
   });
 
+  it("registers both Drawings & Generative Art projects", () => {
+    for (const slug of ["string-art", "logo-turtle"]) {
+      const project = getProject("intro-to-programming", "drawings-and-generative-art", slug);
+      expect(project).not.toBeNull();
+      expect(project?.originalSourcePath).toMatch(/\.py$/);
+    }
+  });
+
   it("returns null for an unknown slug", () => {
     const project = getProject(
       "intro-to-programming",

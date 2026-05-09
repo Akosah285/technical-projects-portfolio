@@ -161,6 +161,24 @@ const PROJECTS: Project[] = [
   },
   {
     course: "intro-to-programming",
+    theme: "drawings-and-generative-art",
+    slug: "string-art",
+    title: "String Art",
+    summary:
+      "Faithful re-rendering of the cs1lib string-art drawing — two red sticks plus n + 1 colour-graded strings interpolated between them. Adjust the stick endpoints and string density to reshape the curve.",
+    originalSourcePath: "/sources/intro-to-programming/string-art/string_art_akwasi.py",
+  },
+  {
+    course: "intro-to-programming",
+    theme: "drawings-and-generative-art",
+    slug: "logo-turtle",
+    title: "Logo Turtle",
+    summary:
+      "A small in-browser Logo interpreter inspired by the FA18 logo submission. Type Logo commands — FORWARD, RIGHT, LEFT, PENUP, PENDOWN, HOME, and nested REPEAT — and the turtle draws live on canvas.",
+    originalSourcePath: "/sources/intro-to-programming/logo-turtle/logoakosah.py",
+  },
+  {
+    course: "intro-to-programming",
     theme: "first-programs-and-loops",
     slug: "egg-and-ham",
     title: "Green Eggs and Ham",

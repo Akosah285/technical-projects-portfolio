@@ -1,0 +1,10 @@
+def Akwasi_logo():
+    print("# # # $ $ # # #")
+    print("# # $ # # $ # #" + "     Akwasi")
+    print("# $ # # # # $ #" + "        D.")
+    print("$ # # # # # # $" + "     Akosah")
+    print("  $ # # # # $ ")
+    print("    $ # # $ ")
+    print("       $ ")
+    print("'Live with Hopes'")
+Akwasi_logo()
