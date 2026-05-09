@@ -191,6 +191,12 @@ const COURSES: Course[] = [
         description:
           "DC motors driven through a TB6612 H-bridge with PWM, plus a pin-change-interrupt speed sensor. A pot sets direction & speed; an SVG shaft spins; the speedometer reports RPM = 3 × pulses/second.",
       },
+      {
+        slug: "iot-and-real-time",
+        title: "IoT & Real-time",
+        description:
+          "Arduino + Airlift WiFi + MQTT subscriptions drive a level-crossing dashboard: RGB stoplight FSM, servo-actuated gate, maintenance + train pre-emption.",
+      },
     ],
   },
 ];

@@ -802,6 +802,25 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "embedded-systems",
+    theme: "iot-and-real-time",
+    slug: "traffic-control",
+    title: "IoT Level-Crossing Dashboard",
+    summary:
+      "Capstone IoT Lab. An Arduino with an Adafruit Airlift WiFi shield subscribes to two Adafruit IO MQTT feeds — `maintenance` (ON/OFF) and a `train_sig` push button — and drives an RGB stoplight + an SG92R servo crossing gate. The FSM cycles RED → YELLOW → GREEN → YELLOW, pre-empting to MAINTENANCE or TRAIN_ARRIVAL on remote events and returning to RED + gate-open on clear. The same FSM is reproduced as a pure reducer here.",
+    originalSourcePath:
+      "/sources/embedded-systems/traffic-control/AIO_MQTT_traffic_control.ino",
+    sourceLanguage: "C++ (Arduino)",
+    relatedSources: [
+      {
+        label: "AIO_MQTT_traffic_control.ino",
+        path: "/sources/embedded-systems/traffic-control/AIO_MQTT_traffic_control.ino",
+        description:
+          "Full sketch — WiFi/MQTT setup, FSM, servo & RGB control, TMP36 publish.",
+      },
+    ],
+  },
 ];
 
 export function getProject(
