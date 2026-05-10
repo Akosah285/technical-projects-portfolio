@@ -1050,6 +1050,36 @@ const PROJECTS: Project[] = [
   },
   {
     course: "microprocessors-engineered-systems",
+    theme: "pwm-and-servos",
+    slug: "pwm-servo",
+    title: "Servo PWM Controller",
+    summary:
+      "Module 3 of ENGS 62 — repurposing the AXI Timer in PWM-generation mode to drive a hobby servo. TMRCTR_0 sets the period (1 ms / 100 Hz), TMRCTR_1 sets the high-time. The UART REPL types `a` / `s` to nudge the duty cycle by ±0.25 %, `low` / `high` to snap to the extremes (5.25 % / 10.25 %), and the firmware enforces those limits before calling servo_set. A second TTC at 1 Hz raises an interrupt that toggles LD4, the heartbeat LED. Click the buttons, watch the servo arm follow.",
+    originalSourcePath: "/sources/microprocessors/pwm-servo/servo.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "servo.c",
+        path: "/sources/microprocessors/pwm-servo/servo.c",
+        description:
+          "PWM generation against XTmrCtr — dual-counter setup, range-clamped servo_set, mid-point initialisation.",
+      },
+      {
+        label: "ttc.c",
+        path: "/sources/microprocessors/pwm-servo/ttc.c",
+        description:
+          "TTC heartbeat — XTtcPs interval-mode setup, GIC connect, callback dispatch.",
+      },
+      {
+        label: "step3-outline.c",
+        path: "/sources/microprocessors/pwm-servo/step3-outline.c",
+        description:
+          "Top-level main() — REPL with a/s/high/low/q + r/g/b/y + digit-toggle, plus button & TTC ISRs all wired together.",
+      },
+    ],
+  },
+  {
+    course: "microprocessors-engineered-systems",
     theme: "gpio-and-uart",
     slug: "uart-led-repl",
     title: "UART REPL & LED Bank",

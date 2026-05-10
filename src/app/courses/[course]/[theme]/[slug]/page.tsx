@@ -50,6 +50,7 @@ import { ImuTurningPlayer } from "./ImuTurningPlayer";
 import { MicromouseMazePlayer } from "./MicromouseMazePlayer";
 import { UartLedReplPlayer } from "./UartLedReplPlayer";
 import { ButtonInterruptsPlayer } from "./ButtonInterruptsPlayer";
+import { PwmServoPlayer } from "./PwmServoPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -154,6 +155,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "micromouse-maze" && <MicromouseMazePlayer />}
       {project.slug === "uart-led-repl" && <UartLedReplPlayer />}
       {project.slug === "button-interrupts" && <ButtonInterruptsPlayer />}
+      {project.slug === "pwm-servo" && <PwmServoPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

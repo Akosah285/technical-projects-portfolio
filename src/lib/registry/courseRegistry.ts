@@ -251,6 +251,12 @@ const COURSES: Course[] = [
         description:
           "Move from polling to interrupts. Wire the four push-buttons and four DIP switches into the Generic Interrupt Controller, dispatch each event to a callback, and detect which switch flipped by XOR-ing the current and previous reading.",
       },
+      {
+        slug: "pwm-and-servos",
+        title: "PWM & Servos",
+        description:
+          "Repurpose the AXI Timer in PWM-generation mode to drive a hobby servo. The duty cycle (5.25 – 10.25 %) maps to the servo arm angle (0 – 180°), and a TTC interrupt at 1 Hz toggles the heartbeat LED so you can tell the SoC is alive.",
+      },
     ],
   },
   {
