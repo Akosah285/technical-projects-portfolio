@@ -257,6 +257,12 @@ const COURSES: Course[] = [
         description:
           "Repurpose the AXI Timer in PWM-generation mode to drive a hobby servo. The duty cycle (5.25 – 10.25 %) maps to the servo arm angle (0 – 180°), and a TTC interrupt at 1 Hz toggles the heartbeat LED so you can tell the SoC is alive.",
       },
+      {
+        slug: "analog-conversion",
+        title: "Analog Conversion",
+        description:
+          "Sample the on-chip XADC. Each push-button reads a different channel — die temperature, internal Vcc, the on-board potentiometer — and a fourth maps the pot voltage straight onto the servo's PWM duty cycle.",
+      },
     ],
   },
   {

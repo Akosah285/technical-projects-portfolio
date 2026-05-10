@@ -1050,6 +1050,35 @@ const PROJECTS: Project[] = [
   },
   {
     course: "microprocessors-engineered-systems",
+    theme: "analog-conversion",
+    slug: "adc-sensors",
+    title: "XADC Sensor Bench",
+    summary:
+      "Module 4 of ENGS 62 — driving the Zynq's on-chip XADC. The sequencer is set to continuous-pass mode reading three channels: die temperature, internal Vcc, and AUX14 (the on-board potentiometer). Each of the four push-buttons reads a different channel: BTN0 prints the temp, BTN1 the Vcc, BTN2 the pot voltage, and BTN3 maps the pot voltage onto the servo's PWM duty cycle via `(5*pot/2.9) + 5.25`. Drag the pot, fire the buttons, watch the readouts and the servo arm respond.",
+    originalSourcePath: "/sources/microprocessors/adc-sensors/adc.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "adc.c",
+        path: "/sources/microprocessors/adc-sensors/adc.c",
+        description:
+          "XADC initialisation + adc_get_temp / adc_get_vccint / adc_get_pot wrappers around XAdcPs_GetAdcData.",
+      },
+      {
+        label: "adc.h",
+        path: "/sources/microprocessors/adc-sensors/adc.h",
+        description: "Public ADC API.",
+      },
+      {
+        label: "step3-outline.c",
+        path: "/sources/microprocessors/adc-sensors/step3-outline.c",
+        description:
+          "Top-level main() — ADC init, button_callback dispatch by index, pot_to_duty linear map driving the servo on BTN3.",
+      },
+    ],
+  },
+  {
+    course: "microprocessors-engineered-systems",
     theme: "pwm-and-servos",
     slug: "pwm-servo",
     title: "Servo PWM Controller",
