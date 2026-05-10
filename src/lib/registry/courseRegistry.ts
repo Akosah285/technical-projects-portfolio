@@ -263,6 +263,12 @@ const COURSES: Course[] = [
         description:
           "Sample the on-chip XADC. Each push-button reads a different channel — die temperature, internal Vcc, the on-board potentiometer — and a fourth maps the pot voltage straight onto the servo's PWM duty cycle.",
       },
+      {
+        slug: "wireless-protocols",
+        title: "Wireless Protocols",
+        description:
+          "PS-UART0 talks to a remote ESP8266 substation while PS-UART1 stays the local console. PING / UPDATE_REQUEST / UPDATE_RESPONSE message structs are framed straight from C `typedef`s and exchanged byte-by-byte through the FIFO.",
+      },
     ],
   },
   {

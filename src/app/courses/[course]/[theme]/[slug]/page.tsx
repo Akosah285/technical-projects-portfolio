@@ -52,6 +52,7 @@ import { UartLedReplPlayer } from "./UartLedReplPlayer";
 import { ButtonInterruptsPlayer } from "./ButtonInterruptsPlayer";
 import { PwmServoPlayer } from "./PwmServoPlayer";
 import { AdcSensorsPlayer } from "./AdcSensorsPlayer";
+import { WifiStationPlayer } from "./WifiStationPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -158,6 +159,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "button-interrupts" && <ButtonInterruptsPlayer />}
       {project.slug === "pwm-servo" && <PwmServoPlayer />}
       {project.slug === "adc-sensors" && <AdcSensorsPlayer />}
+      {project.slug === "wifi-station" && <WifiStationPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}

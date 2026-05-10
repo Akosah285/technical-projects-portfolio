@@ -1050,6 +1050,24 @@ const PROJECTS: Project[] = [
   },
   {
     course: "microprocessors-engineered-systems",
+    theme: "wireless-protocols",
+    slug: "wifi-station",
+    title: "ESP8266 Wireless Link",
+    summary:
+      "Module 5 of ENGS 62 — the SoC talking to a remote ESP8266 substation over PS-UART0 while keeping PS-UART1 as the local console. Three message types are framed straight from C `typedef`s: a PING (just type + id), an UPDATE_REQUEST (type + id + value), and an UPDATE_RESPONSE (type + id + average + values[30]). Each push-button switches the local mode and ships a frame; the remote replies, the byte-by-byte RX handler reassembles the struct, and an UPDATE_RESPONSE drives the local servo from the aggregate value. Drive the pot, fire UPDATEs, watch the bar chart and the servo follow.",
+    originalSourcePath: "/sources/microprocessors/wifi-station/module5.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "module5.c",
+        path: "/sources/microprocessors/wifi-station/module5.c",
+        description:
+          "Top-level main() — PS-UART0 + PS-UART1 setup, button-driven mode switch (CONFIGURE / PING / UPDATE), byte-stream RX handlers that reassemble ping_t and update_response_t structs, percent_to_duty + pot_to_percent helpers.",
+      },
+    ],
+  },
+  {
+    course: "microprocessors-engineered-systems",
     theme: "analog-conversion",
     slug: "adc-sensors",
     title: "XADC Sensor Bench",
