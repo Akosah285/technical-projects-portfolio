@@ -1050,6 +1050,24 @@ const PROJECTS: Project[] = [
   },
   {
     course: "microprocessors-engineered-systems",
+    theme: "state-machines",
+    slug: "traffic-fsm",
+    title: "Level-Crossing FSM",
+    summary:
+      "Module 6 of ENGS 62 — the capstone. Every previous lab pulled into one event-driven FSM: a 9-state level-crossing controller (RED, YELLOW_1, GREEN, YELLOW_2, TF_PED_CROSS, BLUE_STATE_ON / OFF, GATE_CLOSE, GATE_OPEN). Four TTC counters tick out the normal RED → YELLOW → GREEN cycle and the pedestrian / maintenance / train timers. Switch 0 puts the intersection into MAINTENANCE (BLUE blinks), switch 1 simulates a train (gate drops), and the pedestrian button requests a TF_PED_CROSS while the light is RED. The state diagram on the right highlights the active state every transition.",
+    originalSourcePath: "/sources/microprocessors/traffic-fsm/module6.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "module6.c",
+        path: "/sources/microprocessors/traffic-fsm/module6.c",
+        description:
+          "Top-level FSM — traffic_state_t enum, four TTC callbacks, switch_callback for maintenance + train, button_callback for pedestrian, and the giant update_traffic_flow switch that holds every transition.",
+      },
+    ],
+  },
+  {
+    course: "microprocessors-engineered-systems",
     theme: "wireless-protocols",
     slug: "wifi-station",
     title: "ESP8266 Wireless Link",

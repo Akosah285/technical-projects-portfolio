@@ -269,6 +269,12 @@ const COURSES: Course[] = [
         description:
           "PS-UART0 talks to a remote ESP8266 substation while PS-UART1 stays the local console. PING / UPDATE_REQUEST / UPDATE_RESPONSE message structs are framed straight from C `typedef`s and exchanged byte-by-byte through the FIFO.",
       },
+      {
+        slug: "state-machines",
+        title: "State Machines",
+        description:
+          "Pull every previous lab into one event-driven FSM: a 9-state level-crossing controller. Four TTC counters drive the normal RED → YELLOW → GREEN cycle, switches simulate maintenance and train arrival, and the pedestrian button requests a crossing. The state diagram makes every transition observable.",
+      },
     ],
   },
   {
