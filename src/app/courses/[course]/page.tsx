@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 import { getCourse, listAllCourses } from "@/lib/registry/courseRegistry";
 import { listProjectsForTheme } from "@/lib/registry/projectRegistry";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { EyebrowHeading } from "@/components/EyebrowHeading";
-import { AchievementBadge } from "@/components/AchievementBadge";
+import { ProjectExplorer } from "@/components/ProjectExplorer";
+import { getCourseTone, getCourseGlyph } from "@/lib/courseStyle";
 
 export function generateStaticParams() {
   return listAllCourses().map((c) => ({ course: c.slug }));
@@ -26,67 +27,87 @@ export default async function CoursePage({ params }: PageParams) {
   const c = getCourse(course);
   if (!c) notFound();
 
-  const totalProjects = c.themes.reduce(
-    (n, t) => n + listProjectsForTheme(c.slug, t.slug).length,
-    0,
+  const themesWithCounts = c.themes.map((t) => {
+    const projects = listProjectsForTheme(c.slug, t.slug);
+    return { slug: t.slug, title: t.title, count: projects.length };
+  });
+
+  const allProjects = c.themes.flatMap((t) =>
+    listProjectsForTheme(c.slug, t.slug).map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      summary: p.summary,
+      course: p.course,
+      theme: p.theme,
+    })),
   );
 
+  const tone = getCourseTone(c.slug);
+  const glyph = getCourseGlyph(c.slug);
+
+  const heroGradient =
+    tone === "blue"
+      ? "from-blue-500/30 to-indigo-500/20"
+      : tone === "emerald"
+        ? "from-emerald-500/30 to-teal-500/20"
+        : tone === "pink"
+          ? "from-pink-500/30 to-rose-500/20"
+          : "from-amber-500/30 to-orange-500/20";
+
   return (
-    <main className="mx-auto max-w-5xl px-6 pb-24 pt-12 text-white">
-      <nav className="text-xs text-white/50">
+    <main className="mx-auto max-w-6xl px-6 pb-24 pt-12 text-white">
+      <nav className="text-xs text-white/40">
         <Link href="/" className="hover:text-white">
           Home
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white/80">{c.slug}</span>
+        <span className="text-white/70">{c.title}</span>
       </nav>
 
       <ScrollReveal>
-        <header className="mt-8">
-          <EyebrowHeading eyebrow={c.subtitle}>{c.title}</EyebrowHeading>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
-            {c.description}
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            <AchievementBadge label="Themes" value={`${c.themes.length}`} />
-            <AchievementBadge tone="emerald" label="Projects" value={`${totalProjects}`} />
+        <header className="mt-6 flex items-center gap-4">
+          <div
+            className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-white/10 bg-gradient-to-br text-xl font-semibold text-white ${heroGradient}`}
+          >
+            {glyph}
+          </div>
+          <div className="min-w-0">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-white/40">
+              {c.subtitle}
+            </p>
+            <h1 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              {c.title}
+            </h1>
+            <p className="mt-0.5 text-xs text-white/50">
+              {c.themes.length} themes · {allProjects.length} interactive projects
+            </p>
           </div>
         </header>
       </ScrollReveal>
 
-      <section className="mt-16 space-y-6">
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {c.themes.map((theme, i) => {
-            const projects = listProjectsForTheme(c.slug, theme.slug);
-            return (
-              <ScrollReveal key={theme.slug} delay={i * 60}>
-                <li className="h-full">
-                  <Link
-                    href={`/courses/${c.slug}/${theme.slug}/`}
-                    className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition hover:border-blue-400/40 hover:bg-white/[0.07]"
-                  >
-                    <div className="flex items-baseline justify-between gap-3">
-                      <div className="text-lg font-semibold text-white group-hover:text-blue-200">
-                        {theme.title}
-                      </div>
-                      <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] text-white/60">
-                        {projects.length}{" "}
-                        {projects.length === 1 ? "project" : "projects"}
-                      </span>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed text-white/65">
-                      {theme.description}
-                    </p>
-                    <span className="mt-auto inline-flex items-center gap-1 pt-4 text-xs font-semibold text-blue-300/90 group-hover:text-blue-200">
-                      Open theme <span aria-hidden>→</span>
-                    </span>
-                  </Link>
-                </li>
-              </ScrollReveal>
-            );
-          })}
-        </ul>
+      <section className="mt-10">
+        <Suspense
+          fallback={
+            <div className="text-xs text-white/40">Loading projects…</div>
+          }
+        >
+          <ProjectExplorer
+            courseSlug={c.slug}
+            themes={themesWithCounts}
+            projects={allProjects}
+            tone={tone}
+          />
+        </Suspense>
       </section>
+
+      <details className="mt-12 group">
+        <summary className="cursor-pointer text-xs uppercase tracking-[0.2em] text-white/40 hover:text-white/60">
+          About this course
+        </summary>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/60">
+          {c.description}
+        </p>
+      </details>
     </main>
   );
 }

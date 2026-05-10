@@ -10,26 +10,11 @@ import { AchievementBadge } from "@/components/AchievementBadge";
 import { StatStrip } from "@/components/StatStrip";
 import { FeatureRow } from "@/components/FeatureRow";
 import { FaqAccordion } from "@/components/FaqAccordion";
-
-const COURSE_GLYPH: Record<string, string> = {
-  "intro-to-programming": "λ",
-  "problem-solving-oop": "{ }",
-  "machine-learning": "Σ",
-  "embedded-systems": "⚡",
-  "digital-electronics": "⏚",
-  mechatronics: "⚙",
-  "microprocessors-engineered-systems": "μP",
-};
-
-const COURSE_TONE: Record<string, "blue" | "emerald" | "pink" | "amber"> = {
-  "intro-to-programming": "blue",
-  "problem-solving-oop": "emerald",
-  "machine-learning": "pink",
-  "embedded-systems": "amber",
-  "digital-electronics": "blue",
-  mechatronics: "emerald",
-  "microprocessors-engineered-systems": "pink",
-};
+import {
+  COURSE_GLYPH,
+  COURSE_TONE,
+  teaser,
+} from "@/lib/courseStyle";
 
 export default function Home() {
   const courses = listAllCourses();
@@ -45,7 +30,7 @@ export default function Home() {
             <ScrollReveal>
               <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-blue-300/80 backdrop-blur">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-400" />
-                Now: 6 courses · 49 projects
+                Now: {courses.length} courses · {totalProjects} projects
               </p>
               <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Four years of coursework.
@@ -135,8 +120,10 @@ export default function Home() {
                   }
                   description={
                     <>
-                      <p>{course.description}</p>
-                      <div className="mt-5 flex flex-wrap gap-2">
+                      <p className="text-white/70">
+                        {teaser(course.description, 180)}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
                         <AchievementBadge
                           tone={COURSE_TONE[course.slug] ?? "blue"}
                           label="Themes"
@@ -150,7 +137,7 @@ export default function Home() {
                       </div>
                       <Link
                         href={`/courses/${course.slug}/`}
-                        className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-300 hover:text-blue-200"
+                        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-blue-300 hover:text-blue-200"
                       >
                         Open the course
                         <span aria-hidden>→</span>
