@@ -12,21 +12,23 @@ import { FeatureRow } from "@/components/FeatureRow";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 const COURSE_GLYPH: Record<string, string> = {
-  "intro-cs": "λ",
-  "oop-wi19": "{ }",
+  "intro-to-programming": "λ",
+  "problem-solving-oop": "{ }",
   "machine-learning": "Σ",
   "embedded-systems": "⚡",
   "digital-electronics": "⏚",
   mechatronics: "⚙",
+  "microprocessors-engineered-systems": "μP",
 };
 
 const COURSE_TONE: Record<string, "blue" | "emerald" | "pink" | "amber"> = {
-  "intro-cs": "blue",
-  "oop-wi19": "emerald",
+  "intro-to-programming": "blue",
+  "problem-solving-oop": "emerald",
   "machine-learning": "pink",
   "embedded-systems": "amber",
   "digital-electronics": "blue",
   mechatronics: "emerald",
+  "microprocessors-engineered-systems": "pink",
 };
 
 export default function Home() {

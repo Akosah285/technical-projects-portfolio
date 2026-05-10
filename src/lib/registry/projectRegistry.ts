@@ -1011,6 +1011,37 @@ const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    course: "microprocessors-engineered-systems",
+    theme: "gpio-and-uart",
+    slug: "uart-led-repl",
+    title: "UART REPL & LED Bank",
+    summary:
+      "Module 1 of ENGS 62 — the SoC's hello-world. A UART REPL runs on the dual-core Cortex-A9, parses single-character commands typed into the terminal, and drives three different LED systems on the ZYBO-Z7 board: the four AXI-GPIO board LEDs (digits 0–3 toggle them), an on-board MIO LED that lights as soon as the program starts (driven through PS-GPIO), and a second AXI-GPIO RGB LED whose colour follows r/g/b/y commands. Type into the virtual UART, watch the same LED state machine the firmware drives.",
+    originalSourcePath:
+      "/sources/microprocessors/uart-led-repl/blinky.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "blinky.c",
+        path: "/sources/microprocessors/uart-led-repl/blinky.c",
+        description:
+          "Top-level REPL — getchar() loop that buffers a single character, dispatches on Enter, toggles board LEDs / sets RGB colour / quits on 'q'.",
+      },
+      {
+        label: "led.c",
+        path: "/sources/microprocessors/uart-led-repl/led.c",
+        description:
+          "led_init / led_set / led_get / led_toggle implementations against XGpio (AXI) and XGpioPs (processor MIO) drivers.",
+      },
+      {
+        label: "led.h",
+        path: "/sources/microprocessors/uart-led-repl/led.h",
+        description:
+          "Public LED API + RED/GREEN/BLUE/YELLOW masks for the second AXI-GPIO RGB port.",
+      },
+    ],
+  },
 ];
 
 export function getProject(

@@ -233,9 +233,24 @@ const COURSES: Course[] = [
     ],
   },
   {
+    slug: "microprocessors-engineered-systems",
+    title: "Microprocessors in Engineered Systems",
+    subtitle: "Dartmouth ENGS 62 · Winter 2021",
+    description:
+      "Bare-metal C on the Xilinx Zynq-7000 System-on-Chip (ZYBO-Z7 board) — a dual-core ARM Cortex-A9 fused to programmable FPGA fabric, talking to AXI-mapped peripherals over the PS-PL bridge. Each lab climbs one rung of the SoC stack: GPIO → interrupts via the GIC → PWM-mode AXI Timers → the on-chip XADC → a multi-timer state machine for a level-crossing controller → a wireless link to a remote substation. The browser ports model each lab's runtime behaviour deterministically — type at a virtual UART, fire ISRs by clicking switches, sweep a PWM duty cycle and watch a servo arm follow it, drag a virtual potentiometer into the ADC, and step the 9-state traffic FSM through every transition. The original .c / .h source files are linked from each page.",
+    themes: [
+      {
+        slug: "gpio-and-uart",
+        title: "GPIO & UART",
+        description:
+          "Hello-world for the SoC: drive the four board LEDs through AXI-GPIO, the on-board MIO LED through PS-GPIO, and the RGB LED through a second AXI-GPIO port — all from a UART REPL that parses single-character commands.",
+      },
+    ],
+  },
+  {
+    subtitle: "Dartmouth ENGS 147 · Spring 2021",
     slug: "mechatronics",
     title: "Mechatronics",
-    subtitle: "Dartmouth ENGS 147 · Spring 2021",
     description:
       "Closed-loop control of a brushed DC motor + an autonomous micromouse robot, originally written in Arduino C++ on an ATmega2560 with quadrature encoders, an Arduino Motor Shield R3, sharp-IR distance sensors, and a Bosch BNO055 9-axis IMU. The projects port the firmware into deterministic JS simulators — drag the PWM, watch the first-order velocity rise; toggle P vs PI and see steady-state error vanish; track a square-wave position reference; turn the robot by-N-degrees off IMU heading; and let the wall-following micromouse explore an 8×8 maze. Original .ino source files are linked from each page.",
     themes: [

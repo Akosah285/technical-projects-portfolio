@@ -48,6 +48,7 @@ import { SpeedControlPlayer } from "./SpeedControlPlayer";
 import { PositionControlPlayer } from "./PositionControlPlayer";
 import { ImuTurningPlayer } from "./ImuTurningPlayer";
 import { MicromouseMazePlayer } from "./MicromouseMazePlayer";
+import { UartLedReplPlayer } from "./UartLedReplPlayer";
 import { CheckpointTimeline } from "./CheckpointTimeline";
 import { RelatedSources } from "./RelatedSources";
 
@@ -150,6 +151,7 @@ export default async function ProjectPage({ params }: PageParams) {
       {project.slug === "position-control" && <PositionControlPlayer />}
       {project.slug === "imu-turning" && <ImuTurningPlayer />}
       {project.slug === "micromouse-maze" && <MicromouseMazePlayer />}
+      {project.slug === "uart-led-repl" && <UartLedReplPlayer />}
       {project.checkpoints && project.checkpoints.length > 0 && (
         <CheckpointTimeline checkpoints={project.checkpoints} />
       )}
