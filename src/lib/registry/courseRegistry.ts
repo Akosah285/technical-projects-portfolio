@@ -245,6 +245,12 @@ const COURSES: Course[] = [
         description:
           "Hello-world for the SoC: drive the four board LEDs through AXI-GPIO, the on-board MIO LED through PS-GPIO, and the RGB LED through a second AXI-GPIO port — all from a UART REPL that parses single-character commands.",
       },
+      {
+        slug: "interrupts-and-gic",
+        title: "Interrupts & GIC",
+        description:
+          "Move from polling to interrupts. Wire the four push-buttons and four DIP switches into the Generic Interrupt Controller, dispatch each event to a callback, and detect which switch flipped by XOR-ing the current and previous reading.",
+      },
     ],
   },
   {

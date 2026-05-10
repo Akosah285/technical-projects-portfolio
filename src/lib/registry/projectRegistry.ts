@@ -1013,6 +1013,43 @@ const PROJECTS: Project[] = [
   },
   {
     course: "microprocessors-engineered-systems",
+    theme: "interrupts-and-gic",
+    slug: "button-interrupts",
+    title: "Button & Switch Interrupts",
+    summary:
+      "Module 2 of ENGS 62 — moving the LED bank from polling to interrupt-driven I/O. The button bank's GPIO controller is wired into the GIC; pressing a button raises an interrupt whose handler reads the one-hot bitmask and dispatches to the matching board LED's toggle. The switch bank is decoded differently — the handler XOR-s the new reading against the previously-saved value to identify exactly which switch flipped, then dispatches that same toggle. Click any button or flip any switch in the simulator and watch the same dispatch chain execute, the LEDs flip, and the ISR log grow.",
+    originalSourcePath:
+      "/sources/microprocessors/button-interrupts/io.c",
+    sourceLanguage: "C (Zynq SoC)",
+    relatedSources: [
+      {
+        label: "io.c",
+        path: "/sources/microprocessors/button-interrupts/io.c",
+        description:
+          "btn_handler / sw_handler implementations — bitmask switch for buttons, XOR(prev,curr) for switches.",
+      },
+      {
+        label: "io.h",
+        path: "/sources/microprocessors/button-interrupts/io.h",
+        description:
+          "Public API: io_btn_init / io_sw_init register a callback per source, io_btn_close / io_sw_close tear them down.",
+      },
+      {
+        label: "gic.c",
+        path: "/sources/microprocessors/button-interrupts/gic.c",
+        description:
+          "Generic Interrupt Controller wrapper — XScuGic_Connect / Enable / Disconnect.",
+      },
+      {
+        label: "step3-outline.c",
+        path: "/sources/microprocessors/button-interrupts/step3-outline.c",
+        description:
+          "Top-level main() — installs button & switch callbacks then runs the same UART REPL alongside.",
+      },
+    ],
+  },
+  {
+    course: "microprocessors-engineered-systems",
     theme: "gpio-and-uart",
     slug: "uart-led-repl",
     title: "UART REPL & LED Bank",
